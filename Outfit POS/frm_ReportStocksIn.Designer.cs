@@ -1,6 +1,6 @@
 ﻿namespace Outfit_POS
 {
-    partial class frm_ReportDailSalesByInvoice
+    partial class frm_ReportStocksIn
     {
         /// <summary>
         /// Required designer variable.
@@ -32,21 +32,21 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dsReportC = new Outfit_POS.dsReportC();
-            this.DailySalesByInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.StocksInBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dsReportC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DailySalesByInvoiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StocksInBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "dsDRByInvoice";
-            reportDataSource1.Value = this.DailySalesByInvoiceBindingSource;
+            reportDataSource1.Name = "dsStocksIn";
+            reportDataSource1.Value = this.StocksInBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "POSMainForm.rptDailySalesReportByInvoiceNo.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "POSMainForm.rptStocksIn.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(493, 351);
+            this.reportViewer1.Size = new System.Drawing.Size(530, 400);
             this.reportViewer1.TabIndex = 0;
             // 
             // dsReportC
@@ -54,25 +54,25 @@
             this.dsReportC.DataSetName = "dsReportC";
             this.dsReportC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // DailySalesByInvoiceBindingSource
+            // StocksInBindingSource
             // 
-            this.DailySalesByInvoiceBindingSource.DataMember = "DailySalesByInvoice";
-            this.DailySalesByInvoiceBindingSource.DataSource = this.dsReportC;
+            this.StocksInBindingSource.DataMember = "StocksIn";
+            this.StocksInBindingSource.DataSource = this.dsReportC;
             // 
-            // frmReportDailSalesByInvoice
+            // frmReportStocksIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 351);
+            this.ClientSize = new System.Drawing.Size(530, 400);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "frm_ReportDailSalesByInvoice";
+            this.Name = "frm_ReportStocksIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Daily Sales Report By Invoice";
+            this.Text = "Stocks In Report";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmReportDailSalesByInvoice_Load);
+            this.Load += new System.EventHandler(this.frmReportStocksIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsReportC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DailySalesByInvoiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StocksInBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -80,7 +80,7 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource DailySalesByInvoiceBindingSource;
+        private System.Windows.Forms.BindingSource StocksInBindingSource;
         private dsReportC dsReportC;
     }
 }

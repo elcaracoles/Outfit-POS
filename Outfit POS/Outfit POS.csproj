@@ -196,6 +196,30 @@
     <Compile Include="frm_ReportDailSalesByInvoice.Designer.cs">
       <DependentUpon>frm_ReportDailSalesByInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ReportFilterDailySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ReportFilterDailySales.Designer.cs">
+      <DependentUpon>frm_ReportFilterDailySales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ReportFilterStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ReportFilterStocks.Designer.cs">
+      <DependentUpon>frm_ReportFilterStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ReportStocksIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ReportStocksIn.Designer.cs">
+      <DependentUpon>frm_ReportStocksIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ReportStocksOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ReportStocksOut.Designer.cs">
+      <DependentUpon>frm_ReportStocksOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_SelectCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +254,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptDailySalesReportByInvoiceNo.rdlc" />
+    <EmbeddedResource Include="rptStocksIn.rdlc" />
+    <EmbeddedResource Include="rptStocksOut.rdlc" />
     <None Include="dsReportC.xsc">
       <DependentUpon>dsReportC.xsd</DependentUpon>
     </None>
