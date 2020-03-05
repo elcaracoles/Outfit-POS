@@ -104,5 +104,10 @@ namespace Outfit_POS
             frm_SystemSetting ss = new frm_SystemSetting();
             ss.ShowDialog();
         }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

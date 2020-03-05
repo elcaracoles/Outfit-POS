@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            System.Windows.Forms.Timer timer1;
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
@@ -60,6 +60,7 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -72,25 +73,26 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            timer1.Enabled = true;
+            timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // splitContainer1
             // 
             this.splitContainer1.BackColor = System.Drawing.SystemColors.Desktop;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.DarkRed;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Peru;
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel1.Controls.Add(this.picMinimize);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.picClose);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -123,7 +125,7 @@
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(4, 16);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 54);
             this.pictureBox2.TabIndex = 4;
@@ -131,11 +133,11 @@
             // 
             // picMinimize
             // 
-            this.picMinimize.BackColor = System.Drawing.Color.Maroon;
+            this.picMinimize.BackColor = System.Drawing.Color.Black;
             this.picMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimize.Location = new System.Drawing.Point(869, 4);
-            this.picMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.picMinimize.Name = "picMinimize";
             this.picMinimize.Size = new System.Drawing.Size(33, 26);
             this.picMinimize.TabIndex = 2;
@@ -151,17 +153,17 @@
             this.label1.Location = new System.Drawing.Point(67, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(477, 71);
+            this.label1.Size = new System.Drawing.Size(284, 71);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Point of Sale System";
+            this.label1.Text = "POS OUTFIT";
             // 
             // picClose
             // 
-            this.picClose.BackColor = System.Drawing.Color.Maroon;
+            this.picClose.BackColor = System.Drawing.Color.Black;
             this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Location = new System.Drawing.Point(907, 4);
-            this.picClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picClose.Margin = new System.Windows.Forms.Padding(4);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(33, 26);
             this.picClose.TabIndex = 1;
@@ -283,7 +285,7 @@
             this.panel1.Controls.Add(this.lblDateTime);
             this.panel1.Controls.Add(this.lbluser);
             this.panel1.Location = new System.Drawing.Point(0, 459);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(944, 38);
             this.panel1.TabIndex = 10;
@@ -323,7 +325,7 @@
             this.btnStocksReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnStocksReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStocksReport.Location = new System.Drawing.Point(609, 17);
-            this.btnStocksReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStocksReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnStocksReport.Name = "btnStocksReport";
             this.btnStocksReport.Size = new System.Drawing.Size(111, 96);
             this.btnStocksReport.TabIndex = 9;
@@ -340,7 +342,7 @@
             this.btnDailySales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnDailySales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDailySales.Location = new System.Drawing.Point(491, 17);
-            this.btnDailySales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDailySales.Margin = new System.Windows.Forms.Padding(4);
             this.btnDailySales.Name = "btnDailySales";
             this.btnDailySales.Size = new System.Drawing.Size(111, 96);
             this.btnDailySales.TabIndex = 9;
@@ -357,7 +359,7 @@
             this.btnPOS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPOS.Location = new System.Drawing.Point(372, 17);
-            this.btnPOS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPOS.Margin = new System.Windows.Forms.Padding(4);
             this.btnPOS.Name = "btnPOS";
             this.btnPOS.Size = new System.Drawing.Size(111, 96);
             this.btnPOS.TabIndex = 9;
@@ -374,7 +376,7 @@
             this.btnProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProduct.Location = new System.Drawing.Point(253, 17);
-            this.btnProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(4);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(111, 96);
             this.btnProduct.TabIndex = 9;
@@ -391,7 +393,7 @@
             this.btnCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCategory.Location = new System.Drawing.Point(135, 17);
-            this.btnCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(111, 96);
             this.btnCategory.TabIndex = 9;
@@ -408,7 +410,7 @@
             this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSettings.Location = new System.Drawing.Point(16, 183);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(4);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(111, 96);
             this.btnSettings.TabIndex = 9;
@@ -425,7 +427,7 @@
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Location = new System.Drawing.Point(135, 183);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(111, 96);
             this.btnExit.TabIndex = 9;
@@ -442,7 +444,7 @@
             this.btnDatabaseConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnDatabaseConfig.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDatabaseConfig.Location = new System.Drawing.Point(728, 17);
-            this.btnDatabaseConfig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDatabaseConfig.Margin = new System.Windows.Forms.Padding(4);
             this.btnDatabaseConfig.Name = "btnDatabaseConfig";
             this.btnDatabaseConfig.Size = new System.Drawing.Size(111, 96);
             this.btnDatabaseConfig.TabIndex = 9;
@@ -452,7 +454,7 @@
             // btnStaff
             // 
             this.btnStaff.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnStaff.BackgroundImage = global::Outfit_POS.Properties.Resources.btnStaff_BackgroundImage;
+            this.btnStaff.BackgroundImage = global::Outfit_POS.Properties.Resources.staff;
             this.btnStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStaff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStaff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -460,7 +462,7 @@
             this.btnStaff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStaff.Location = new System.Drawing.Point(16, 17);
-            this.btnStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStaff.Margin = new System.Windows.Forms.Padding(4);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(111, 96);
             this.btnStaff.TabIndex = 9;
@@ -473,7 +475,7 @@
             this.listView1.Font = new System.Drawing.Font("Magneto", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(944, 498);
             this.listView1.TabIndex = 0;
@@ -498,7 +500,7 @@
             this.ClientSize = new System.Drawing.Size(944, 614);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -548,6 +550,5 @@
         private System.Windows.Forms.Label lblDateTime;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Timer timer1;
     }
 }
