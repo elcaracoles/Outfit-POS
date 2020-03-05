@@ -190,6 +190,12 @@
     <Compile Include="frm_Payment.Designer.cs">
       <DependentUpon>frm_Payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_POS.Designer.cs">
+      <DependentUpon>frm_POS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ReportDailSalesByInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,17 +238,35 @@
     <Compile Include="frm_SystemSetting.Designer.cs">
       <DependentUpon>frm_SystemSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLConn.cs" />
     <EmbeddedResource Include="frm_AddEditCategory.resx">
       <DependentUpon>frm_AddEditCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_ListCategory.resx">
+      <DependentUpon>frm_ListCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ListProduct.resx">
+      <DependentUpon>frm_ListProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ListStaff.resx">
+      <DependentUpon>frm_ListStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_POS.resx">
+      <DependentUpon>frm_POS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
