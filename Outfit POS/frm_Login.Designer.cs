@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Pass = new System.Windows.Forms.TextBox();
@@ -39,13 +38,11 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOkay = new System.Windows.Forms.Button();
             this.GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.pictureBox1);
             this.GroupBox1.Controls.Add(this.label2);
             this.GroupBox1.Controls.Add(this.label1);
             this.GroupBox1.Controls.Add(this.txt_Pass);
@@ -58,41 +55,33 @@
             this.GroupBox1.Size = new System.Drawing.Size(507, 172);
             this.GroupBox1.TabIndex = 0;
             this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Login Information";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 31);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(103, 122);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.GroupBox1.Text = "Acceso al sistema";
+            this.GroupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 82);
+            this.label2.Location = new System.Drawing.Point(43, 109);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 17);
+            this.label2.Size = new System.Drawing.Size(95, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Password :";
+            this.label2.Text = "Contraseña:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 48);
+            this.label1.Location = new System.Drawing.Point(43, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "User:";
+            this.label1.Text = "Usuario:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_Pass
             // 
-            this.txt_Pass.Location = new System.Drawing.Point(257, 79);
+            this.txt_Pass.Location = new System.Drawing.Point(163, 106);
             this.txt_Pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Pass.Name = "txt_Pass";
             this.txt_Pass.PasswordChar = '*';
@@ -102,7 +91,7 @@
             // 
             // txt_user
             // 
-            this.txt_user.Location = new System.Drawing.Point(257, 44);
+            this.txt_user.Location = new System.Drawing.Point(163, 44);
             this.txt_user.Margin = new System.Windows.Forms.Padding(4);
             this.txt_user.Name = "txt_user";
             this.txt_user.Size = new System.Drawing.Size(225, 24);
@@ -111,7 +100,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel2.BackColor = System.Drawing.Color.Peru;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(-5, -1);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -122,14 +111,14 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Viner Hand ITC", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(150, 0);
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 19.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(15, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(230, 60);
+            this.label3.Size = new System.Drawing.Size(504, 58);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Outfit POS ";
+            this.label3.Text = "OUTFIT POS - VÍCTOR ASIX";
             // 
             // btnCancel
             // 
@@ -145,7 +134,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(196, 54);
             this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "&Cancel";
+            this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -158,12 +147,12 @@
             this.btnOkay.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.btnOkay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOkay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.btnOkay.Location = new System.Drawing.Point(121, 252);
+            this.btnOkay.Location = new System.Drawing.Point(9, 252);
             this.btnOkay.Margin = new System.Windows.Forms.Padding(4);
             this.btnOkay.Name = "btnOkay";
             this.btnOkay.Size = new System.Drawing.Size(191, 54);
             this.btnOkay.TabIndex = 1;
-            this.btnOkay.Text = "&Login";
+            this.btnOkay.Text = "Acceder";
             this.btnOkay.UseVisualStyleBackColor = false;
             this.btnOkay.Click += new System.EventHandler(this.btnOkay_Click);
             // 
@@ -185,7 +174,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -200,7 +188,6 @@
         private System.Windows.Forms.TextBox txt_user;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOkay;
     }

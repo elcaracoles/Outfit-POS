@@ -100,5 +100,15 @@ namespace Outfit_POS
         {
             Login();
         }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
