@@ -238,6 +238,9 @@
     <EmbeddedResource Include="frm_AddEditCategory.resx">
       <DependentUpon>frm_AddEditCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_AddEditProduct.resx">
+      <DependentUpon>frm_AddEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>

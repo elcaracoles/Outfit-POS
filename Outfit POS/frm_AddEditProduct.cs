@@ -226,5 +226,15 @@ namespace Outfit_POS
             get { return categoryID; }
             set { categoryID = value; }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
