@@ -69,7 +69,7 @@ namespace Outfit_POS
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -82,7 +82,7 @@ namespace Outfit_POS
         {
             if (ListView1.Items.Count == 0)
             {
-                Interaction.MsgBox("Please select record to update", MsgBoxStyle.Exclamation, "Update");
+                MessageBox.Show("Por favor seleccione el registro para actualizar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             try
@@ -102,7 +102,7 @@ namespace Outfit_POS
             }
             catch
             {
-                Interaction.MsgBox("Please select record to update", MsgBoxStyle.Exclamation, "Update");
+                MessageBox.Show("Por favor seleccione el registro para actualizar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
         }
@@ -110,7 +110,7 @@ namespace Outfit_POS
         private void button3_Click(object sender, EventArgs e)
         {
 
-            SQLConn.strSearch = Interaction.InputBox("ENTER LAST NAME OF THE STAFF.", "Search Staff", " ");
+            SQLConn.strSearch = Interaction.InputBox("Introduzca apellidpo del Staff", "Buscar Staff", " ");
 
             if (SQLConn.strSearch.Length >= 1)
             {
@@ -122,10 +122,16 @@ namespace Outfit_POS
             }
         }
 
-        private void picClose_Click(object sender, EventArgs e)
+        
+
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }
