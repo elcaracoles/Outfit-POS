@@ -58,7 +58,7 @@ namespace Outfit_POS
                 SQLConn.conn.Close();
             }
         }
-
+       
         private void btnNew_Click(object sender, EventArgs e)
         {
             SQLConn.adding = true;
