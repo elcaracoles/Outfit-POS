@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -110,8 +109,8 @@ namespace Outfit_POS
         private void button3_Click(object sender, EventArgs e)
         {
 
-            SQLConn.strSearch = Interaction.InputBox("Introduzca apellidpo del Staff", "Buscar Staff", " ");
-
+            SQLConn.strSearch = InputBox.Show("Introduzca apellidpo del Staff", "Buscar Staff", " ").Text;
+        
             if (SQLConn.strSearch.Length >= 1)
             {
                 LoadStaffs(SQLConn.strSearch.Trim());

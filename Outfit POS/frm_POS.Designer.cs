@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -79,14 +78,17 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,20 +101,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1281, 99);
             this.panel1.TabIndex = 0;
-            // 
-            // picClose
-            // 
-            this.picClose.BackColor = System.Drawing.Color.White;
-            this.picClose.BackgroundImage = global::Outfit_POS.Properties.Resources.cerrar;
-            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Location = new System.Drawing.Point(1242, 4);
-            this.picClose.Margin = new System.Windows.Forms.Padding(4);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(33, 26);
-            this.picClose.TabIndex = 2;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // label1
             // 
@@ -128,6 +116,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -148,7 +137,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(814, 15);
+            this.label7.Location = new System.Drawing.Point(866, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 4;
@@ -157,7 +146,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(714, 15);
+            this.label6.Location = new System.Drawing.Point(766, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 4;
@@ -166,7 +155,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(608, 15);
+            this.label5.Location = new System.Drawing.Point(660, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 17);
             this.label5.TabIndex = 4;
@@ -175,7 +164,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(235, 15);
+            this.label4.Location = new System.Drawing.Point(287, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 4;
@@ -201,7 +190,8 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(784, 35);
+            this.textBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox6.Location = new System.Drawing.Point(836, 35);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(100, 22);
@@ -211,7 +201,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(717, 35);
+            this.textBox5.Location = new System.Drawing.Point(769, 35);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(61, 22);
             this.textBox5.TabIndex = 4;
@@ -220,7 +210,8 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(611, 35);
+            this.textBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox4.Location = new System.Drawing.Point(663, 35);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(100, 22);
@@ -230,8 +221,10 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(228, 35);
+            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox3.Location = new System.Drawing.Point(280, 35);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(377, 22);
             this.textBox3.TabIndex = 4;
             // 
@@ -241,6 +234,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 4;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // textBox1
             // 
@@ -600,6 +594,35 @@
             this.label10.TabIndex = 31;
             this.label10.Text = "Informacion Suff";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Outfit_POS.Properties.Resources.productos;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Outfit_POS.Properties.Resources.productos;
+            this.pictureBox1.Location = new System.Drawing.Point(229, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.White;
+            this.picClose.BackgroundImage = global::Outfit_POS.Properties.Resources.cerrar;
+            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Location = new System.Drawing.Point(1242, 4);
+            this.picClose.Margin = new System.Windows.Forms.Padding(4);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(33, 26);
+            this.picClose.TabIndex = 2;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
             // frm_POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -619,7 +642,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -630,6 +652,8 @@
             this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -687,5 +711,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

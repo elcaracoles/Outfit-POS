@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -44,11 +43,11 @@ namespace Outfit_POS
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox(ex.ToString());
+                MessageBox.Show(ex.ToString());
             }
             finally
             {
-                SQLConn.cmd.Dispose();
+               // SQLConn.cmd.Dispose();
                 SQLConn.conn.Close();
             }
         }
@@ -66,7 +65,7 @@ namespace Outfit_POS
         {
             if (ListView1.Items.Count == 0)
             {
-                Interaction.MsgBox("Please select record to update", MsgBoxStyle.Exclamation, "Update");
+                MessageBox.Show("Por favor seleccione el registro para actualizar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             try
@@ -86,14 +85,14 @@ namespace Outfit_POS
             }
             catch
             {
-                Interaction.MsgBox("Please select record to update", MsgBoxStyle.Exclamation, "Update");
+                MessageBox.Show("Por favor seleccione el registro para actualizar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SQLConn.strSearch = Interaction.InputBox("ENTER CATEGORY NAME.", "Search Category", " ");
+            SQLConn.strSearch = InputBox.Show("ENTER PRODUCT NAME.", "Search Product", " ").Text;
 
             if (SQLConn.strSearch.Length >= 1)
             {
