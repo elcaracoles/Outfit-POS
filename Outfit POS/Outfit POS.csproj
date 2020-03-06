@@ -250,11 +250,23 @@
     <EmbeddedResource Include="frm_AddEditCategory.resx">
       <DependentUpon>frm_AddEditCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_AddEditProduct.resx">
+      <DependentUpon>frm_AddEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AddEditStaff.resx">
+      <DependentUpon>frm_AddEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DatabaseConfig.resx">
+      <DependentUpon>frm_DatabaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ListCategory.resx">
       <DependentUpon>frm_ListCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ListProduct.resx">
       <DependentUpon>frm_ListProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ListProductStocksIn.resx">
+      <DependentUpon>frm_ListProductStocksIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ListStaff.resx">
       <DependentUpon>frm_ListStaff.cs</DependentUpon>
@@ -267,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_POS.resx">
       <DependentUpon>frm_POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SystemSetting.resx">
+      <DependentUpon>frm_SystemSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -374,6 +389,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explorador.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

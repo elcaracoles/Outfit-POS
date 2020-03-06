@@ -121,5 +121,10 @@ namespace Outfit_POS
         {
             txtTotalStocks.Text = Strings.Format(Conversion.Val(lblCurrentStocks.Text) + Conversion.Val(txtQuantity.Text), "#,##0.00");
         }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

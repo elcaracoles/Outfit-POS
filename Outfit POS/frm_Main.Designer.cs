@@ -278,6 +278,7 @@
             this.lbluser.TabIndex = 8;
             this.lbluser.Text = "Inicio de sesión : ADMIN";
             this.lbluser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbluser.Click += new System.EventHandler(this.lbluser_Click);
             // 
             // listView1
             // 

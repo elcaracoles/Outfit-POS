@@ -95,5 +95,10 @@ namespace Outfit_POS
         {
             this.Close();
         }
+
+        private void txtDatabase_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

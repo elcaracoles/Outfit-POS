@@ -236,5 +236,10 @@ namespace Outfit_POS
         {
 
         }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

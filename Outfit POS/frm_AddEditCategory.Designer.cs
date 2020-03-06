@@ -49,7 +49,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Peru;
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.lblTitle);
             this.panel2.Location = new System.Drawing.Point(-1, -1);
@@ -62,12 +62,12 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Black;
             this.lblTitle.Location = new System.Drawing.Point(75, 17);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(285, 32);
+            this.lblTitle.Size = new System.Drawing.Size(326, 43);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Agregar/Editar categoría";
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);

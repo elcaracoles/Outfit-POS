@@ -79,25 +79,27 @@
             this.GroupBox1.Controls.Add(this.Label6);
             this.GroupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(9, 73);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Size = new System.Drawing.Size(863, 398);
             this.GroupBox1.TabIndex = 1;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Información del producto";
+            this.GroupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // Button3
             // 
-            this.Button3.BackColor = System.Drawing.Color.DarkGray;
+            this.Button3.BackColor = System.Drawing.Color.Gainsboro;
             this.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Button3.Location = new System.Drawing.Point(431, 187);
-            this.Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Button3.Margin = new System.Windows.Forms.Padding(4);
             this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(35, 26);
+            this.Button3.Size = new System.Drawing.Size(52, 23);
             this.Button3.TabIndex = 4;
+            this.Button3.Text = ". . .";
             this.Button3.UseVisualStyleBackColor = false;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
@@ -116,7 +118,7 @@
             // 
             this.txtDescription.BackColor = System.Drawing.Color.White;
             this.txtDescription.Location = new System.Drawing.Point(204, 119);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(648, 24);
             this.txtDescription.TabIndex = 1;
@@ -135,7 +137,7 @@
             // 
             this.txtReorderLevel.BackColor = System.Drawing.Color.White;
             this.txtReorderLevel.Location = new System.Drawing.Point(204, 290);
-            this.txtReorderLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtReorderLevel.Margin = new System.Windows.Forms.Padding(4);
             this.txtReorderLevel.Name = "txtReorderLevel";
             this.txtReorderLevel.Size = new System.Drawing.Size(219, 24);
             this.txtReorderLevel.TabIndex = 7;
@@ -144,7 +146,7 @@
             // 
             this.txtUnitPrice.BackColor = System.Drawing.Color.White;
             this.txtUnitPrice.Location = new System.Drawing.Point(204, 223);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(219, 24);
             this.txtUnitPrice.TabIndex = 5;
@@ -155,9 +157,9 @@
             this.Label9.Location = new System.Drawing.Point(21, 297);
             this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(115, 17);
+            this.Label9.Size = new System.Drawing.Size(142, 17);
             this.Label9.TabIndex = 4;
-            this.Label9.Text = "Reorder Level :";
+            this.Label9.Text = "Nivel de inventario:";
             // 
             // Label7
             // 
@@ -173,7 +175,7 @@
             // 
             this.txtStocksOnHand.BackColor = System.Drawing.Color.White;
             this.txtStocksOnHand.Location = new System.Drawing.Point(204, 258);
-            this.txtStocksOnHand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStocksOnHand.Margin = new System.Windows.Forms.Padding(4);
             this.txtStocksOnHand.Name = "txtStocksOnHand";
             this.txtStocksOnHand.Size = new System.Drawing.Size(219, 24);
             this.txtStocksOnHand.TabIndex = 6;
@@ -192,7 +194,7 @@
             // 
             this.txtCategory.BackColor = System.Drawing.Color.White;
             this.txtCategory.Location = new System.Drawing.Point(204, 186);
-            this.txtCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(4);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(219, 24);
             this.txtCategory.TabIndex = 3;
@@ -211,7 +213,7 @@
             // 
             this.txtBarcode.BackColor = System.Drawing.Color.White;
             this.txtBarcode.Location = new System.Drawing.Point(204, 151);
-            this.txtBarcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBarcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Size = new System.Drawing.Size(219, 24);
             this.txtBarcode.TabIndex = 2;
@@ -231,7 +233,7 @@
             this.txtProductCode.BackColor = System.Drawing.Color.White;
             this.txtProductCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductCode.Location = new System.Drawing.Point(204, 87);
-            this.txtProductCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductCode.Name = "txtProductCode";
             this.txtProductCode.Size = new System.Drawing.Size(648, 24);
             this.txtProductCode.TabIndex = 0;
@@ -253,17 +255,17 @@
             this.Label6.Location = new System.Drawing.Point(21, 54);
             this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(142, 17);
+            this.Label6.Size = new System.Drawing.Size(137, 17);
             this.Label6.TabIndex = 3;
-            this.Label6.Text = "Número Producto :";
+            this.Label6.Text = "Número Producto:";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Peru;
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.lblTitle);
             this.panel2.Location = new System.Drawing.Point(-1, -1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(891, 66);
             this.panel2.TabIndex = 12;
@@ -271,9 +273,10 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = global::Outfit_POS.Properties.Resources.productos1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(11, 5);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 54);
             this.pictureBox2.TabIndex = 2;
@@ -282,12 +285,12 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Black;
             this.lblTitle.Location = new System.Drawing.Point(65, 17);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(266, 32);
+            this.lblTitle.Size = new System.Drawing.Size(312, 43);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Añadir/Editar producto";
             // 
@@ -296,46 +299,46 @@
             this.GroupBox2.Controls.Add(this.button4);
             this.GroupBox2.Controls.Add(this.button1);
             this.GroupBox2.Location = new System.Drawing.Point(9, 478);
-            this.GroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Size = new System.Drawing.Size(863, 111);
             this.GroupBox2.TabIndex = 13;
             this.GroupBox2.TabStop = false;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.PowderBlue;
+            this.button4.BackColor = System.Drawing.Color.Gainsboro;
+            this.button4.BackgroundImage = global::Outfit_POS.Properties.Resources.cancelar;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button4.Location = new System.Drawing.Point(749, 20);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(743, 20);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 78);
             this.button4.TabIndex = 16;
-            this.button4.Text = "&Cancel";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.BackgroundImage = global::Outfit_POS.Properties.Resources.guardar;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button1.Location = new System.Drawing.Point(641, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(15, 20);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 78);
             this.button1.TabIndex = 15;
-            this.button1.Text = "&Save";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -349,7 +352,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_AddEditProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmAddEditProduct_Load);
