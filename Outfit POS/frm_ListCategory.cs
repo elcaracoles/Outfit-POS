@@ -115,7 +115,14 @@ namespace Outfit_POS
             LoadCategories("");
         }
 
-        private void picClose_Click(object sender, EventArgs e)
+       
+
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void picClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

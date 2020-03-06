@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace Outfit_POS
 {
@@ -31,7 +30,8 @@ namespace Outfit_POS
 
         private void picClose_Click(object sender, EventArgs e)
         {
-            if (Interaction.MsgBox("Are you sure you want to exit?", MsgBoxStyle.YesNo, "Exit System") == MsgBoxResult.Yes)
+           
+            if (MessageBox.Show("¿Estas seguro que deseas salir ? ", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -63,7 +63,7 @@ namespace Outfit_POS
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if (Interaction.MsgBox("Are you sure you want to exit?", MsgBoxStyle.YesNo, "Exit System") == MsgBoxResult.Yes)
+            if (MessageBox.Show("¿Estas seguro que deseas salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -77,9 +77,9 @@ namespace Outfit_POS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // frmPOS lp = new frmPOS(StaffID);
-            // lp.ShowDialog();
-            Interaction.MsgBox("Message us on our facebook page. https://www.facebook.com/CyberVSS");
+             frm_POS lp = new frm_POS(StaffID);
+             lp.ShowDialog();
+            //MessageBox.Show("Message us on our facebook page. https://www.facebook.com/CyberVSS");
         }
 
         private void picMinimize_Click(object sender, EventArgs e)
@@ -89,14 +89,14 @@ namespace Outfit_POS
 
       private void button5_Click(object sender, EventArgs e)
         {
-            /*/frmReportFilterDailySales FR = new frmReportFilterDailySales();
-            FR.ShowDialog();*/
+            frm_ReportFilterDailySales FR = new frm_ReportFilterDailySales();
+            FR.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-           /* frmReportFilterStocks rf = new frmReportFilterStocks();
-            rf.ShowDialog();*/
+            frm_ReportFilterStocks rf = new frm_ReportFilterStocks();
+            rf.ShowDialog();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
