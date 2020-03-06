@@ -58,5 +58,10 @@ namespace Outfit_POS
         {
             this.Close();
         }
+
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

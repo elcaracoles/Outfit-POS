@@ -73,7 +73,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 34);
             this.btnClose.TabIndex = 10;
-            this.btnClose.Text = "&Close";
+            this.btnClose.Text = "Cerrar";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -91,7 +91,7 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 34);
             this.btnSearch.TabIndex = 10;
-            this.btnSearch.Text = "&Search";
+            this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -136,12 +136,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 25.75F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(79, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 76);
+            this.label1.Size = new System.Drawing.Size(255, 75);
             this.label1.TabIndex = 1;
             this.label1.Text = "Categorías";
             // 
@@ -187,7 +187,7 @@
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(100, 34);
             this.btnNew.TabIndex = 10;
-            this.btnNew.Text = "&New";
+            this.btnNew.Text = "Nuevo";
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
@@ -205,7 +205,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 34);
             this.btnUpdate.TabIndex = 10;
-            this.btnUpdate.Text = "&Update";
+            this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -224,7 +224,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1164, 71);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Accion";
+            this.groupBox1.Text = "Acción";
             // 
             // panel1
             // 

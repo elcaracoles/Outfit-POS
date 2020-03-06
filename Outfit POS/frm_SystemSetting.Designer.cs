@@ -69,7 +69,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 70);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(599, 478);
@@ -79,9 +79,9 @@
             // 
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(591, 448);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Company ";
@@ -103,17 +103,18 @@
             this.groupBox1.Controls.Add(this.txtPhoneNo);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Location = new System.Drawing.Point(11, 18);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(560, 411);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Company Information";
+            this.groupBox1.Text = "Inormación de la empresa";
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.PowderBlue;
+            this.button3.BackColor = System.Drawing.Color.Gainsboro;
+            this.button3.BackgroundImage = global::Outfit_POS.Properties.Resources.guardar;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
@@ -121,11 +122,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.button3.Location = new System.Drawing.Point(447, 322);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 78);
             this.button3.TabIndex = 18;
-            this.button3.Text = "&Save";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -137,7 +137,7 @@
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(77, 17);
             this.Label2.TabIndex = 9;
-            this.Label2.Text = "Address :";
+            this.Label2.Text = "Dirección:";
             // 
             // Label7
             // 
@@ -147,7 +147,7 @@
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(103, 17);
             this.Label7.TabIndex = 11;
-            this.Label7.Text = "TIN Number :";
+            this.Label7.Text = "Número TIN :";
             // 
             // Label5
             // 
@@ -155,9 +155,9 @@
             this.Label5.Location = new System.Drawing.Point(13, 261);
             this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(75, 17);
+            this.Label5.Size = new System.Drawing.Size(81, 17);
             this.Label5.TabIndex = 12;
-            this.Label5.Text = "Website :";
+            this.Label5.Text = "Sitio Web:";
             // 
             // Label4
             // 
@@ -165,9 +165,9 @@
             this.Label4.Location = new System.Drawing.Point(13, 228);
             this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(76, 17);
+            this.Label4.Size = new System.Drawing.Size(50, 17);
             this.Label4.TabIndex = 13;
-            this.Label4.Text = "Email ID :";
+            this.Label4.Text = "Email:";
             // 
             // Label3
             // 
@@ -175,9 +175,9 @@
             this.Label3.Location = new System.Drawing.Point(13, 194);
             this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(86, 17);
+            this.Label3.Size = new System.Drawing.Size(55, 17);
             this.Label3.TabIndex = 10;
-            this.Label3.Text = "Phone No :";
+            this.Label3.Text = "No Tlf:";
             // 
             // Label1
             // 
@@ -185,14 +185,14 @@
             this.Label1.Location = new System.Drawing.Point(13, 28);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(58, 17);
+            this.Label1.Size = new System.Drawing.Size(69, 17);
             this.Label1.TabIndex = 7;
-            this.Label1.Text = "Name :";
+            this.Label1.Text = "Nombre:";
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(144, 98);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(400, 84);
@@ -201,7 +201,7 @@
             // txtTINNumber
             // 
             this.txtTINNumber.Location = new System.Drawing.Point(144, 290);
-            this.txtTINNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTINNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtTINNumber.Name = "txtTINNumber";
             this.txtTINNumber.Size = new System.Drawing.Size(400, 24);
             this.txtTINNumber.TabIndex = 17;
@@ -209,7 +209,7 @@
             // txtWebsite
             // 
             this.txtWebsite.Location = new System.Drawing.Point(144, 257);
-            this.txtWebsite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtWebsite.Margin = new System.Windows.Forms.Padding(4);
             this.txtWebsite.Name = "txtWebsite";
             this.txtWebsite.Size = new System.Drawing.Size(400, 24);
             this.txtWebsite.TabIndex = 16;
@@ -217,7 +217,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(144, 224);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(400, 24);
             this.txtEmail.TabIndex = 15;
@@ -225,7 +225,7 @@
             // txtPhoneNo
             // 
             this.txtPhoneNo.Location = new System.Drawing.Point(144, 191);
-            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.Size = new System.Drawing.Size(199, 24);
             this.txtPhoneNo.TabIndex = 14;
@@ -233,7 +233,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(144, 25);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(400, 66);
@@ -243,9 +243,9 @@
             // 
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(591, 448);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "VAT";
@@ -258,17 +258,18 @@
             this.groupBox2.Controls.Add(this.txtPercent);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(11, 7);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(560, 422);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Details";
+            this.groupBox2.Text = "Detalles";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.BackgroundImage = global::Outfit_POS.Properties.Resources.guardar;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
@@ -276,11 +277,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.button1.Location = new System.Drawing.Point(444, 331);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 78);
             this.button1.TabIndex = 19;
-            this.button1.Text = "&Save";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -290,14 +290,14 @@
             this.label11.Location = new System.Drawing.Point(8, 39);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 17);
+            this.label11.Size = new System.Drawing.Size(140, 17);
             this.label11.TabIndex = 1;
-            this.label11.Text = "Vat Percent :";
+            this.label11.Text = "Porcentaje de IVA:";
             // 
             // txtPercent
             // 
-            this.txtPercent.Location = new System.Drawing.Point(124, 36);
-            this.txtPercent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPercent.Location = new System.Drawing.Point(156, 36);
+            this.txtPercent.Margin = new System.Windows.Forms.Padding(4);
             this.txtPercent.Name = "txtPercent";
             this.txtPercent.Size = new System.Drawing.Size(111, 24);
             this.txtPercent.TabIndex = 0;
@@ -309,18 +309,19 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.lblTitle);
             this.panel2.Location = new System.Drawing.Point(0, -4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(599, 66);
             this.panel2.TabIndex = 12;
             // 
             // picClose
             // 
-            this.picClose.BackColor = System.Drawing.Color.PowderBlue;
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.BackgroundImage = global::Outfit_POS.Properties.Resources.cerrar;
             this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Location = new System.Drawing.Point(555, 7);
-            this.picClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picClose.Margin = new System.Windows.Forms.Padding(4);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(33, 26);
             this.picClose.TabIndex = 5;
@@ -332,7 +333,7 @@
             this.pictureBox2.BackgroundImage = global::Outfit_POS.Properties.Resources.configuracion;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(11, 5);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 54);
             this.pictureBox2.TabIndex = 2;
@@ -359,7 +360,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_SystemSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmSystemSetting_Load);

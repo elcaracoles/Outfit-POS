@@ -79,6 +79,9 @@ namespace Outfit_POS
             this.Close();
         }
 
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
