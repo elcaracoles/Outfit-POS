@@ -238,15 +238,10 @@
     <Compile Include="frm_SystemSetting.Designer.cs">
       <DependentUpon>frm_SystemSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="InputBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InputBox.Designer.cs">
-      <DependentUpon>InputBox.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Utiles\InputBox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQLConn.cs" />
+    <Compile Include="Utiles\SQLConn.cs" />
     <EmbeddedResource Include="frm_AddEditCategory.resx">
       <DependentUpon>frm_AddEditCategory.cs</DependentUpon>
     </EmbeddedResource>
