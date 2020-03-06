@@ -99,7 +99,7 @@ namespace Outfit_POS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SQLConn.strSearch = Interaction.InputBox("ENTER PRODUCT NAME.", "Search Product", " ");
+            SQLConn.strSearch = InputBox.Show("ENTER PRODUCT NAME.", "Search Product", " ").Text;
 
             if (SQLConn.strSearch.Length >= 1)
             {

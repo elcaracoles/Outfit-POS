@@ -229,7 +229,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(0, 567);
+            this.panel1.Location = new System.Drawing.Point(0, 548);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1185, 43);
@@ -268,19 +268,16 @@
             this.ColumnHeader1,
             this.ColumnHeader2,
             this.ColumnHeader3});
-            this.ListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListView1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView1.FullRowSelect = true;
             this.ListView1.GridLines = true;
             this.ListView1.HideSelection = false;
-            this.ListView1.Location = new System.Drawing.Point(0, 0);
-            this.ListView1.Margin = new System.Windows.Forms.Padding(4);
+            this.ListView1.Location = new System.Drawing.Point(0, 3);
             this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(1172, 590);
+            this.ListView1.Size = new System.Drawing.Size(1168, 549);
             this.ListView1.TabIndex = 28;
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
-            this.ListView1.VirtualMode = true;
             // 
             // ColumnHeader1
             // 
