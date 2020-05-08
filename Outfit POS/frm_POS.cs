@@ -256,12 +256,12 @@ namespace Outfit_POS
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            limpiar();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
+            limpiar();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -301,20 +301,23 @@ namespace Outfit_POS
                 return;
             }
             finally {
-                listView1.Items.Clear();
-                label9.Text = get_Invoice();
-                textBox3.Text = "";
-                textBox4.Text = "0.00";
-                textBox5.Text = "1";
-                textBox6.Text = "0";
-                textBox9.Text = "0";
-                textBox10.Text = "0";
-                textBox11.Text = "0";
-                textBox12.Text = "0";
-             
-                textBox1.Focus();
+                limpiar();
             }
 
+        }
+        private void limpiar() {
+            listView1.Items.Clear();
+            label9.Text = get_Invoice();
+            textBox3.Text = "";
+            textBox4.Text = "0.00";
+            textBox5.Text = "1";
+            textBox6.Text = "0";
+            textBox9.Text = "0";
+            textBox10.Text = "0";
+            textBox11.Text = "0";
+            textBox12.Text = "0";
+
+            textBox1.Focus();
         }
     }
     class product {
