@@ -168,7 +168,7 @@ namespace Outfit_POS
             }
         }
         private void ch_texbox() {
-            if (textBox2.Enabled == true || textBox1.Enabled == true|| textBox5.ReadOnly == true)
+            if (textBox2.Enabled == true && textBox1.Enabled == true && textBox5.ReadOnly == true)
             {
 
                
@@ -201,6 +201,7 @@ namespace Outfit_POS
             else
             {
                 MessageBox.Show("No hay Stock suficiente de "+pr.Description,"Alerta!");
+                ch_texbox();
             }
 
         }
@@ -319,6 +320,27 @@ namespace Outfit_POS
 
             textBox1.Focus();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frm_FindProduct fndProduct = new frm_FindProduct();
+                       
+            if (fndProduct.ShowDialog(this) == DialogResult.OK)
+            {
+                // Read the contents of testDialog's TextBox.
+                this.textBox2.Text = fndProduct.productID.ToString();
+                product pr = new product(textBox2.Text, 1);
+                fill_Product(pr);
+
+                ch_texbox();
+
+            }
+            else
+            {
+                this.textBox2.Text = "";
+            }
+            fndProduct.Dispose();
+        }
     }
     class product {
         #region prop product
@@ -428,13 +450,14 @@ namespace Outfit_POS
                 switch (operacion)
                 {
                     case 1:
-                        SQLConn.sqL = "select ProductNo,ProductCode, Description,Barcode,UnitPrice, StocksOnHand, ReorderLevel, CategoryNo from  product where ProductCode LIKE '" + codigo + "%' limit 1";
+                        SQLConn.sqL = "select ProductNo,ProductCode, Description,Barcode,UnitPrice, StocksOnHand, ReorderLevel, CategoryNo from  product where ProductNo = " + codigo + " limit 1";
                         break;
                     case 2:
-                        SQLConn.sqL = "select ProductNo,ProductCode, Description,Barcode,UnitPrice, StocksOnHand ,ReorderLevel,CategoryNo from  product where Barcode LIKE '" + codigo + "%' limit 1";
+                        SQLConn.sqL = "select ProductNo,ProductCode, Description,Barcode,UnitPrice, StocksOnHand ,ReorderLevel,CategoryNo from  product where Barcode LIKE '" + codigo + "' limit 1";
                         break;
                     default:
-                        SQLConn.sqL = "select ProductNo,ProductCode, Description,Barcode,UnitPrice, StocksOnHand, ReorderLevel, CategoryNo from  product where ProductCode LIKE '" + codigo + "%' limit 1";
+                        SQLConn.sqL = "select ProductNo,ProductCode, Description,Barcode,UnitPrice, StocksOnHand, ReorderLevel, CategoryNo from  product where ProductNo = " + codigo + " limit 1";
+                        // SQLConn.sqL = "select ProductNo,ProductCode, Description,Barcode,UnitPrice, StocksOnHand, ReorderLevel, CategoryNo from  product where ProductCode LIKE '" + codigo + "' limit 1";
                         break;
                 }
                 SQLConn.ConnDB();
