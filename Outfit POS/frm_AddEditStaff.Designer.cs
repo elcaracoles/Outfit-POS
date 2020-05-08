@@ -98,7 +98,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblTitle.Location = new System.Drawing.Point(65, 17);
+            this.lblTitle.Location = new System.Drawing.Point(79, 10);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(261, 43);
@@ -392,7 +392,7 @@
             // txtContractNo
             // 
             this.txtContractNo.BackColor = System.Drawing.Color.White;
-            this.txtContractNo.Location = new System.Drawing.Point(166, 241);
+            this.txtContractNo.Location = new System.Drawing.Point(174, 241);
             this.txtContractNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtContractNo.Name = "txtContractNo";
             this.txtContractNo.Size = new System.Drawing.Size(219, 24);
@@ -438,7 +438,7 @@
             // txtProvince
             // 
             this.txtProvince.BackColor = System.Drawing.Color.White;
-            this.txtProvince.Location = new System.Drawing.Point(166, 204);
+            this.txtProvince.Location = new System.Drawing.Point(174, 204);
             this.txtProvince.Margin = new System.Windows.Forms.Padding(4);
             this.txtProvince.Name = "txtProvince";
             this.txtProvince.Size = new System.Drawing.Size(664, 24);
