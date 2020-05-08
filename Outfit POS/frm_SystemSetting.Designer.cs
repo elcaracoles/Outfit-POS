@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SystemSetting));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label7 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
@@ -45,23 +44,23 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPercent = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -69,33 +68,24 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 57);
+            this.tabControl1.Location = new System.Drawing.Point(0, 70);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(449, 388);
+            this.tabControl1.Size = new System.Drawing.Size(599, 478);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(441, 362);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(591, 448);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Company ";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(441, 362);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "VAT";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -112,159 +102,154 @@
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.txtPhoneNo);
             this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Location = new System.Drawing.Point(8, 15);
+            this.groupBox1.Location = new System.Drawing.Point(11, 18);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(420, 334);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(560, 411);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Company Information";
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(10, 80);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(62, 13);
-            this.Label2.TabIndex = 9;
-            this.Label2.Text = "Address :";
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(10, 239);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(85, 13);
-            this.Label7.TabIndex = 11;
-            this.Label7.Text = "TIN Number :";
-            // 
-            // Label5
-            // 
-            this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(10, 212);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(60, 13);
-            this.Label5.TabIndex = 12;
-            this.Label5.Text = "Website :";
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(10, 185);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(65, 13);
-            this.Label4.TabIndex = 13;
-            this.Label4.Text = "Email ID :";
-            // 
-            // Label3
-            // 
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(10, 158);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(70, 13);
-            this.Label3.TabIndex = 10;
-            this.Label3.Text = "Phone No :";
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(10, 23);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(49, 13);
-            this.Label1.TabIndex = 7;
-            this.Label1.Text = "Name :";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(108, 80);
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(301, 69);
-            this.txtAddress.TabIndex = 8;
-            // 
-            // txtTINNumber
-            // 
-            this.txtTINNumber.Location = new System.Drawing.Point(108, 236);
-            this.txtTINNumber.Name = "txtTINNumber";
-            this.txtTINNumber.Size = new System.Drawing.Size(301, 21);
-            this.txtTINNumber.TabIndex = 17;
-            // 
-            // txtWebsite
-            // 
-            this.txtWebsite.Location = new System.Drawing.Point(108, 209);
-            this.txtWebsite.Name = "txtWebsite";
-            this.txtWebsite.Size = new System.Drawing.Size(301, 21);
-            this.txtWebsite.TabIndex = 16;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(108, 182);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(301, 21);
-            this.txtEmail.TabIndex = 15;
-            // 
-            // txtPhoneNo
-            // 
-            this.txtPhoneNo.Location = new System.Drawing.Point(108, 155);
-            this.txtPhoneNo.Name = "txtPhoneNo";
-            this.txtPhoneNo.Size = new System.Drawing.Size(150, 21);
-            this.txtPhoneNo.TabIndex = 14;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(108, 20);
-            this.txtName.Multiline = true;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(301, 54);
-            this.txtName.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel2.Controls.Add(this.picClose);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.lblTitle);
-            this.panel2.Location = new System.Drawing.Point(0, -3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(449, 54);
-            this.panel2.TabIndex = 12;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 44);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblTitle.Location = new System.Drawing.Point(49, 14);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(140, 25);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "System Setting";
+            this.groupBox1.Text = "Inormación de la empresa";
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.PowderBlue;
+            this.button3.BackColor = System.Drawing.Color.Gainsboro;
+            this.button3.BackgroundImage = global::Outfit_POS.Properties.Resources.guardar;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Myriad Hebrew", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button3.Location = new System.Drawing.Point(335, 262);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
+            this.button3.Location = new System.Drawing.Point(447, 322);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 63);
+            this.button3.Size = new System.Drawing.Size(100, 78);
             this.button3.TabIndex = 18;
-            this.button3.Text = "&Save";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Label2
+            // 
+            this.Label2.AutoSize = true;
+            this.Label2.Location = new System.Drawing.Point(13, 98);
+            this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(77, 17);
+            this.Label2.TabIndex = 9;
+            this.Label2.Text = "Dirección:";
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Location = new System.Drawing.Point(13, 294);
+            this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(103, 17);
+            this.Label7.TabIndex = 11;
+            this.Label7.Text = "Número TIN :";
+            // 
+            // Label5
+            // 
+            this.Label5.AutoSize = true;
+            this.Label5.Location = new System.Drawing.Point(13, 261);
+            this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label5.Name = "Label5";
+            this.Label5.Size = new System.Drawing.Size(81, 17);
+            this.Label5.TabIndex = 12;
+            this.Label5.Text = "Sitio Web:";
+            // 
+            // Label4
+            // 
+            this.Label4.AutoSize = true;
+            this.Label4.Location = new System.Drawing.Point(13, 228);
+            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label4.Name = "Label4";
+            this.Label4.Size = new System.Drawing.Size(50, 17);
+            this.Label4.TabIndex = 13;
+            this.Label4.Text = "Email:";
+            // 
+            // Label3
+            // 
+            this.Label3.AutoSize = true;
+            this.Label3.Location = new System.Drawing.Point(13, 194);
+            this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(55, 17);
+            this.Label3.TabIndex = 10;
+            this.Label3.Text = "No Tlf:";
+            // 
+            // Label1
+            // 
+            this.Label1.AutoSize = true;
+            this.Label1.Location = new System.Drawing.Point(13, 28);
+            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(69, 17);
+            this.Label1.TabIndex = 7;
+            this.Label1.Text = "Nombre:";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(144, 98);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(400, 84);
+            this.txtAddress.TabIndex = 8;
+            // 
+            // txtTINNumber
+            // 
+            this.txtTINNumber.Location = new System.Drawing.Point(144, 290);
+            this.txtTINNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTINNumber.Name = "txtTINNumber";
+            this.txtTINNumber.Size = new System.Drawing.Size(400, 24);
+            this.txtTINNumber.TabIndex = 17;
+            // 
+            // txtWebsite
+            // 
+            this.txtWebsite.Location = new System.Drawing.Point(144, 257);
+            this.txtWebsite.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWebsite.Name = "txtWebsite";
+            this.txtWebsite.Size = new System.Drawing.Size(400, 24);
+            this.txtWebsite.TabIndex = 16;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(144, 224);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(400, 24);
+            this.txtEmail.TabIndex = 15;
+            // 
+            // txtPhoneNo
+            // 
+            this.txtPhoneNo.Location = new System.Drawing.Point(144, 191);
+            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNo.Name = "txtPhoneNo";
+            this.txtPhoneNo.Size = new System.Drawing.Size(199, 24);
+            this.txtPhoneNo.TabIndex = 14;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(144, 25);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(400, 66);
+            this.txtName.TabIndex = 6;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(591, 448);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "VAT";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -272,82 +257,124 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtPercent);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(8, 6);
+            this.groupBox2.Location = new System.Drawing.Point(11, 7);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(420, 343);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(560, 422);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Details";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 32);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Vat Percent :";
-            // 
-            // txtPercent
-            // 
-            this.txtPercent.Location = new System.Drawing.Point(93, 29);
-            this.txtPercent.Name = "txtPercent";
-            this.txtPercent.Size = new System.Drawing.Size(84, 21);
-            this.txtPercent.TabIndex = 0;
+            this.groupBox2.Text = "Detalles";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.BackgroundImage = global::Outfit_POS.Properties.Resources.guardar;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Myriad Hebrew", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button1.Location = new System.Drawing.Point(333, 269);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
+            this.button1.Location = new System.Drawing.Point(444, 331);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 63);
+            this.button1.Size = new System.Drawing.Size(100, 78);
             this.button1.TabIndex = 19;
-            this.button1.Text = "&Save";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 39);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(140, 17);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Porcentaje de IVA:";
+            // 
+            // txtPercent
+            // 
+            this.txtPercent.Location = new System.Drawing.Point(156, 36);
+            this.txtPercent.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPercent.Name = "txtPercent";
+            this.txtPercent.Size = new System.Drawing.Size(111, 24);
+            this.txtPercent.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.picClose);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.lblTitle);
+            this.panel2.Location = new System.Drawing.Point(0, -4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(599, 66);
+            this.panel2.TabIndex = 12;
+            // 
             // picClose
             // 
-            this.picClose.BackColor = System.Drawing.Color.PowderBlue;
-            this.picClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picClose.BackgroundImage")));
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.BackgroundImage = global::Outfit_POS.Properties.Resources.cerrar;
             this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Location = new System.Drawing.Point(416, 6);
+            this.picClose.Location = new System.Drawing.Point(555, 7);
+            this.picClose.Margin = new System.Windows.Forms.Padding(4);
             this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(25, 21);
+            this.picClose.Size = new System.Drawing.Size(33, 26);
             this.picClose.TabIndex = 5;
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
-            // frmSystemSetting
+            // pictureBox2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.pictureBox2.BackgroundImage = global::Outfit_POS.Properties.Resources.configuracion;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 54);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Location = new System.Drawing.Point(65, 17);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(201, 43);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "System Setting";
+            // 
+            // frm_SystemSetting
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 440);
+            this.ClientSize = new System.Drawing.Size(592, 542);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_SystemSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmSystemSetting_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -79,7 +79,7 @@ namespace Outfit_POS
         {
              frm_POS lp = new frm_POS(StaffID);
              lp.ShowDialog();
-            //MessageBox.Show("Message us on our facebook page. https://www.facebook.com/CyberVSS");
+           
         }
 
         private void picMinimize_Click(object sender, EventArgs e)
@@ -126,6 +126,11 @@ namespace Outfit_POS
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbluser_Click(object sender, EventArgs e)
         {
 
         }

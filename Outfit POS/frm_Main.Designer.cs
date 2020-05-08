@@ -31,7 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Timer timer1;
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picMinimize = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,13 +47,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.picMinimize = new System.Windows.Forms.PictureBox();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.btnStocksReport = new System.Windows.Forms.Button();
             this.btnDailySales = new System.Windows.Forms.Button();
             this.btnPOS = new System.Windows.Forms.Button();
@@ -60,15 +56,19 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDatabaseConfig = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -121,6 +121,33 @@
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Outfit_POS.Properties.Resources.home;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 29);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 54);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // picMinimize
+            // 
+            this.picMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.picMinimize.BackgroundImage = global::Outfit_POS.Properties.Resources.minimizar;
+            this.picMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimize.Location = new System.Drawing.Point(845, 4);
+            this.picMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.picMinimize.Name = "picMinimize";
+            this.picMinimize.Size = new System.Drawing.Size(33, 26);
+            this.picMinimize.TabIndex = 2;
+            this.picMinimize.TabStop = false;
+            this.toolTip1.SetToolTip(this.picMinimize, "Minimize to Tray");
+            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -133,6 +160,21 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "OUTFIT POS - VÍCTOR ASIX";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.BackgroundImage = global::Outfit_POS.Properties.Resources.cerrar;
+            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Location = new System.Drawing.Point(907, 4);
+            this.picClose.Margin = new System.Windows.Forms.Padding(4);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(33, 26);
+            this.picClose.TabIndex = 1;
+            this.picClose.TabStop = false;
+            this.toolTip1.SetToolTip(this.picClose, "Close Application");
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // label10
             // 
@@ -278,73 +320,7 @@
             this.lbluser.TabIndex = 8;
             this.lbluser.Text = "Inicio de sesión : ADMIN";
             this.lbluser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Magneto", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(944, 498);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.BalloonTipText = "Time Management System";
-            this.notifyIcon1.Text = "Time Management System";
-            this.notifyIcon1.Visible = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Outfit_POS.Properties.Resources.home;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 29);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 54);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // picMinimize
-            // 
-            this.picMinimize.BackColor = System.Drawing.Color.White;
-            this.picMinimize.BackgroundImage = global::Outfit_POS.Properties.Resources.minimizar;
-            this.picMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimize.Location = new System.Drawing.Point(869, 4);
-            this.picMinimize.Margin = new System.Windows.Forms.Padding(4);
-            this.picMinimize.Name = "picMinimize";
-            this.picMinimize.Size = new System.Drawing.Size(33, 26);
-            this.picMinimize.TabIndex = 2;
-            this.picMinimize.TabStop = false;
-            this.toolTip1.SetToolTip(this.picMinimize, "Minimize to Tray");
-            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
-            // 
-            // picClose
-            // 
-            this.picClose.BackColor = System.Drawing.Color.White;
-            this.picClose.BackgroundImage = global::Outfit_POS.Properties.Resources.cerrar;
-            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Location = new System.Drawing.Point(907, 4);
-            this.picClose.Margin = new System.Windows.Forms.Padding(4);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(33, 26);
-            this.picClose.TabIndex = 1;
-            this.picClose.TabStop = false;
-            this.toolTip1.SetToolTip(this.picClose, "Close Application");
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            this.lbluser.Click += new System.EventHandler(this.lbluser_Click);
             // 
             // btnStocksReport
             // 
@@ -508,6 +484,31 @@
             this.btnStaff.UseVisualStyleBackColor = false;
             this.btnStaff.Click += new System.EventHandler(this.button1_Click);
             // 
+            // listView1
+            // 
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Font = new System.Drawing.Font("Magneto", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(944, 498);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipText = "Time Management System";
+            this.notifyIcon1.Text = "Time Management System";
+            this.notifyIcon1.Visible = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -525,10 +526,10 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
