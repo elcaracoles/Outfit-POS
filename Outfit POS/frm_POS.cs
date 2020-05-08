@@ -208,10 +208,13 @@ namespace Outfit_POS
         private double total_e()
         {
             double total = 0;
+            double discount = 0;
             foreach (ListViewItem lstItem in listView1.Items) // listView has ListViewItem objects
             {
                 total += double.Parse(lstItem.SubItems[5].Text); // Columns 4
             }
+            double.TryParse(textBox13.Text,out discount);
+            total = total - (total * discount / 100);
             return total;
         }
         private double total_p()
@@ -340,6 +343,34 @@ namespace Outfit_POS
                 this.textBox2.Text = "";
             }
             fndProduct.Dispose();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frm_Discount fDiscount = new frm_Discount();
+
+            if (fDiscount.ShowDialog(this) == DialogResult.OK)
+            {
+                // Read the contents of testDialog's TextBox.
+                this.textBox13.Text = fDiscount.discount.ToString();
+                textBox12.Text = total_e().ToString();
+                textBox10.Text = total_p().ToString();
+
+            }
+            else
+            {
+                this.textBox2.Text = "";
+            }
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double total = 0;
+            double.TryParse(textBox12.Text, out total);
+            frm_Payment pay = new frm_Payment(label9.Text, total);
+            pay.ShowDialog();
+
         }
     }
     class product {

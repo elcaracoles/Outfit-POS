@@ -59,6 +59,8 @@
             this.Total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Discount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -69,8 +71,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -399,6 +399,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel6.Controls.Add(this.textBox13);
+            this.panel6.Controls.Add(this.label19);
             this.panel6.Controls.Add(this.textBox12);
             this.panel6.Controls.Add(this.label17);
             this.panel6.Controls.Add(this.textBox11);
@@ -410,14 +412,34 @@
             this.panel6.Controls.Add(this.label15);
             this.panel6.Location = new System.Drawing.Point(991, 310);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(302, 190);
+            this.panel6.Size = new System.Drawing.Size(302, 261);
             this.panel6.TabIndex = 5;
+            // 
+            // textBox13
+            // 
+            this.textBox13.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox13.Location = new System.Drawing.Point(148, 73);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(143, 22);
+            this.textBox13.TabIndex = 46;
+            this.textBox13.Text = "0.00";
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(30, 76);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(80, 17);
+            this.label19.TabIndex = 45;
+            this.label19.Text = "Descuento:";
             // 
             // textBox12
             // 
             this.textBox12.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(148, 129);
+            this.textBox12.Location = new System.Drawing.Point(148, 156);
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(143, 34);
@@ -429,7 +451,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(30, 132);
+            this.label17.Location = new System.Drawing.Point(29, 166);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(56, 24);
             this.label17.TabIndex = 43;
@@ -438,7 +460,7 @@
             // textBox11
             // 
             this.textBox11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox11.Location = new System.Drawing.Point(148, 101);
+            this.textBox11.Location = new System.Drawing.Point(149, 128);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(143, 22);
@@ -449,7 +471,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(30, 104);
+            this.label16.Location = new System.Drawing.Point(30, 128);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(108, 17);
             this.label16.TabIndex = 41;
@@ -458,7 +480,7 @@
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox9.Location = new System.Drawing.Point(148, 73);
+            this.textBox9.Location = new System.Drawing.Point(149, 100);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(143, 22);
@@ -469,7 +491,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(30, 76);
+            this.label13.Location = new System.Drawing.Point(31, 103);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(76, 17);
             this.label13.TabIndex = 39;
@@ -508,39 +530,16 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel7.Controls.Add(this.button8);
-            this.panel7.Controls.Add(this.button7);
             this.panel7.Controls.Add(this.button6);
             this.panel7.Controls.Add(this.button5);
             this.panel7.Controls.Add(this.button4);
             this.panel7.Controls.Add(this.button3);
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.button1);
-            this.panel7.Location = new System.Drawing.Point(992, 506);
+            this.panel7.Location = new System.Drawing.Point(992, 577);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(301, 303);
+            this.panel7.Size = new System.Drawing.Size(301, 232);
             this.panel7.TabIndex = 6;
-            // 
-            // button8
-            // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(153, 221);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(127, 62);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Vaciar [F8]";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button7
-            // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(20, 221);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(127, 62);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Re-Imprimir [F7]";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -573,6 +572,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Descuento [F3]";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -583,6 +583,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Pagar [F4]";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -748,7 +749,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
@@ -756,8 +756,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ColumnHeader TDetailNo;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label19;
     }
 }

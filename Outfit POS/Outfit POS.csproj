@@ -124,6 +124,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReportC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frm_Discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Discount.Designer.cs">
+      <DependentUpon>frm_Discount.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_FindProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DatabaseConfig.resx">
       <DependentUpon>frm_DatabaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Discount.resx">
+      <DependentUpon>frm_Discount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_FindProduct.resx">
       <DependentUpon>frm_FindProduct.cs</DependentUpon>
