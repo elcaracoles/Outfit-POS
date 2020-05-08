@@ -347,9 +347,9 @@
             this.lblTitle.Location = new System.Drawing.Point(65, 17);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(201, 43);
+            this.lblTitle.Size = new System.Drawing.Size(334, 43);
             this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "System Setting";
+            this.lblTitle.Text = "Configuración del Sistema";
             // 
             // frm_SystemSetting
             // 

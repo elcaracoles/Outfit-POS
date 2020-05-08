@@ -272,8 +272,14 @@
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Payment.resx">
+      <DependentUpon>frm_Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_POS.resx">
       <DependentUpon>frm_POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ReportFilterStocks.resx">
+      <DependentUpon>frm_ReportFilterStocks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SystemSetting.resx">
       <DependentUpon>frm_SystemSetting.cs</DependentUpon>

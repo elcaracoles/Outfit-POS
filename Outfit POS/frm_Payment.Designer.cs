@@ -50,9 +50,9 @@
             this.GroupBox1.Controls.Add(this.txtTA);
             this.GroupBox1.Controls.Add(this.Label1);
             this.GroupBox1.Location = new System.Drawing.Point(11, 74);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Size = new System.Drawing.Size(465, 233);
             this.GroupBox1.TabIndex = 10;
             this.GroupBox1.TabStop = false;
@@ -61,7 +61,7 @@
             // 
             this.txtCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCash.Location = new System.Drawing.Point(189, 75);
-            this.txtCash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCash.Margin = new System.Windows.Forms.Padding(4);
             this.txtCash.Name = "txtCash";
             this.txtCash.Size = new System.Drawing.Size(229, 37);
             this.txtCash.TabIndex = 11;
@@ -75,7 +75,7 @@
             this.txtChange.Enabled = false;
             this.txtChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChange.Location = new System.Drawing.Point(189, 118);
-            this.txtChange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChange.Margin = new System.Windows.Forms.Padding(4);
             this.txtChange.Name = "txtChange";
             this.txtChange.Size = new System.Drawing.Size(229, 46);
             this.txtChange.TabIndex = 13;
@@ -109,7 +109,7 @@
             this.txtTA.Enabled = false;
             this.txtTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTA.Location = new System.Drawing.Point(189, 32);
-            this.txtTA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTA.Margin = new System.Windows.Forms.Padding(4);
             this.txtTA.Name = "txtTA";
             this.txtTA.Size = new System.Drawing.Size(229, 37);
             this.txtTA.TabIndex = 9;
@@ -122,16 +122,16 @@
             this.Label1.Location = new System.Drawing.Point(11, 39);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(135, 25);
+            this.Label1.Size = new System.Drawing.Size(139, 25);
             this.Label1.TabIndex = 10;
-            this.Label1.Text = "Total Amount :";
+            this.Label1.Text = "Cantidad Total:";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.lblTitle);
             this.panel2.Location = new System.Drawing.Point(-4, -2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(496, 66);
             this.panel2.TabIndex = 12;
@@ -158,7 +158,7 @@
             this.Controls.Add(this.GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmPayment_Load_1);

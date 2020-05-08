@@ -100,7 +100,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Peru;
+            this.panel2.BackColor = System.Drawing.Color.Salmon;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(-5, -1);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);

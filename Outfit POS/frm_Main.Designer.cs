@@ -87,7 +87,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Peru;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Salmon;
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel1.Controls.Add(this.picMinimize);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
