@@ -40,14 +40,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtCant = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtDescrip = new System.Windows.Forms.TextBox();
+            this.txtCodprod = new System.Windows.Forms.TextBox();
+            this.txtBar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.invoiceNo = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -61,11 +61,11 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtTotalAmount = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtNonVatTotal = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtVatAmount = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -141,12 +141,12 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtTotal);
+            this.panel2.Controls.Add(this.txtCant);
+            this.panel2.Controls.Add(this.txtPrice);
+            this.panel2.Controls.Add(this.txtDescrip);
+            this.panel2.Controls.Add(this.txtCodprod);
+            this.panel2.Controls.Add(this.txtBar);
             this.panel2.Location = new System.Drawing.Point(12, 117);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(973, 72);
@@ -166,13 +166,13 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Outfit_POS.Properties.Resources.productos;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Outfit_POS.Properties.Resources.productos;
-            this.pictureBox1.Location = new System.Drawing.Point(229, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(226, 15);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 22);
+            this.pictureBox1.Size = new System.Drawing.Size(54, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -232,83 +232,84 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Codigo Barras";
             // 
-            // textBox6
+            // txtTotal
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox6.Location = new System.Drawing.Point(836, 35);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 4;
-            this.textBox6.Text = "0.00";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtTotal.Location = new System.Drawing.Point(836, 35);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(100, 22);
+            this.txtTotal.TabIndex = 4;
+            this.txtTotal.Text = "0.00";
+            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox5
+            // txtCant
             // 
-            this.textBox5.Location = new System.Drawing.Point(769, 35);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(61, 22);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.Text = "1";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            this.txtCant.Location = new System.Drawing.Point(769, 35);
+            this.txtCant.Name = "txtCant";
+            this.txtCant.ReadOnly = true;
+            this.txtCant.Size = new System.Drawing.Size(61, 22);
+            this.txtCant.TabIndex = 4;
+            this.txtCant.Text = "1";
+            this.txtCant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCant.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
             // 
-            // textBox4
+            // txtPrice
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox4.Location = new System.Drawing.Point(663, 35);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "0.00";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrice.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtPrice.Location = new System.Drawing.Point(663, 35);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.Size = new System.Drawing.Size(100, 22);
+            this.txtPrice.TabIndex = 4;
+            this.txtPrice.Text = "0.00";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // txtDescrip
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox3.Location = new System.Drawing.Point(280, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(377, 22);
-            this.textBox3.TabIndex = 4;
+            this.txtDescrip.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtDescrip.Location = new System.Drawing.Point(280, 35);
+            this.txtDescrip.Name = "txtDescrip";
+            this.txtDescrip.ReadOnly = true;
+            this.txtDescrip.Size = new System.Drawing.Size(377, 22);
+            this.txtDescrip.TabIndex = 4;
             // 
-            // textBox2
+            // txtCodprod
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.txtCodprod.Location = new System.Drawing.Point(122, 35);
+            this.txtCodprod.Name = "txtCodprod";
+            this.txtCodprod.Size = new System.Drawing.Size(100, 22);
+            this.txtCodprod.TabIndex = 4;
+            this.txtCodprod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
-            // textBox1
+            // txtBar
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtBar.Location = new System.Drawing.Point(16, 35);
+            this.txtBar.Name = "txtBar";
+            this.txtBar.Size = new System.Drawing.Size(100, 22);
+            this.txtBar.TabIndex = 3;
+            this.txtBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.invoiceNo);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(991, 117);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(302, 72);
             this.panel3.TabIndex = 2;
             // 
-            // label9
+            // invoiceNo
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(135, 28);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(139, 29);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "100100055";
+            this.invoiceNo.AutoSize = true;
+            this.invoiceNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invoiceNo.Location = new System.Drawing.Point(135, 28);
+            this.invoiceNo.Name = "invoiceNo";
+            this.invoiceNo.Size = new System.Drawing.Size(139, 29);
+            this.invoiceNo.TabIndex = 7;
+            this.invoiceNo.Text = "100100055";
             // 
             // label8
             // 
@@ -401,11 +402,11 @@
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel6.Controls.Add(this.textBox13);
             this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.textBox12);
+            this.panel6.Controls.Add(this.txtTotalAmount);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.textBox11);
+            this.panel6.Controls.Add(this.txtNonVatTotal);
             this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.textBox9);
+            this.panel6.Controls.Add(this.txtVatAmount);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.textBox10);
             this.panel6.Controls.Add(this.label14);
@@ -435,17 +436,17 @@
             this.label19.TabIndex = 45;
             this.label19.Text = "Descuento:";
             // 
-            // textBox12
+            // txtTotalAmount
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(148, 156);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(143, 34);
-            this.textBox12.TabIndex = 44;
-            this.textBox12.Text = "0.00";
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotalAmount.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalAmount.Location = new System.Drawing.Point(148, 156);
+            this.txtTotalAmount.Name = "txtTotalAmount";
+            this.txtTotalAmount.ReadOnly = true;
+            this.txtTotalAmount.Size = new System.Drawing.Size(143, 34);
+            this.txtTotalAmount.TabIndex = 44;
+            this.txtTotalAmount.Text = "0.00";
+            this.txtTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label17
             // 
@@ -457,16 +458,16 @@
             this.label17.TabIndex = 43;
             this.label17.Text = "Total:";
             // 
-            // textBox11
+            // txtNonVatTotal
             // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox11.Location = new System.Drawing.Point(149, 128);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(143, 22);
-            this.textBox11.TabIndex = 42;
-            this.textBox11.Text = "0.00";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNonVatTotal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtNonVatTotal.Location = new System.Drawing.Point(149, 128);
+            this.txtNonVatTotal.Name = "txtNonVatTotal";
+            this.txtNonVatTotal.ReadOnly = true;
+            this.txtNonVatTotal.Size = new System.Drawing.Size(143, 22);
+            this.txtNonVatTotal.TabIndex = 42;
+            this.txtNonVatTotal.Text = "0.00";
+            this.txtNonVatTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label16
             // 
@@ -477,16 +478,16 @@
             this.label16.TabIndex = 41;
             this.label16.Text = "Base Imponible:";
             // 
-            // textBox9
+            // txtVatAmount
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox9.Location = new System.Drawing.Point(149, 100);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(143, 22);
-            this.textBox9.TabIndex = 40;
-            this.textBox9.Text = "0.00";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtVatAmount.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtVatAmount.Location = new System.Drawing.Point(149, 100);
+            this.txtVatAmount.Name = "txtVatAmount";
+            this.txtVatAmount.ReadOnly = true;
+            this.txtVatAmount.Size = new System.Drawing.Size(143, 22);
+            this.txtVatAmount.TabIndex = 40;
+            this.txtVatAmount.Text = "0.00";
+            this.txtVatAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label13
             // 
@@ -715,14 +716,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtCant;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtDescrip;
+        private System.Windows.Forms.TextBox txtCodprod;
+        private System.Windows.Forms.TextBox txtBar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label invoiceNo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
@@ -734,9 +735,9 @@
         private System.Windows.Forms.ColumnHeader Quantity;
         private System.Windows.Forms.ColumnHeader Total;
         private System.Windows.Forms.ColumnHeader Discount;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtNonVatTotal;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtVatAmount;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label14;
@@ -747,7 +748,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtTotalAmount;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;

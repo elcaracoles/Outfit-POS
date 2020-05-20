@@ -46,7 +46,7 @@ namespace Outfit_POS
         private void frmPayment_Load(System.Object sender, System.EventArgs e)
         {
             this.Location = new Point(515, 470);
-            txtTA.Text = Strings.FormatNumber(TotalAmount).ToString();
+            txtTA.Text = TotalAmount.ToString();
             txtCash.Text = "";
         }
 
@@ -54,7 +54,14 @@ namespace Outfit_POS
         {
             if (e.KeyChar == ControlChars.Cr)
             {
-                if (Convert.ToDouble(txtTA.Text.Replace(",", "")) > Convert.ToDouble(txtCash.Text.Replace(",", "")))
+                double ta= 99999999, cash = 99999999, chan = 99999999;
+                double.TryParse(txtTA.Text.Replace(",", ""), out ta);
+                double.TryParse(txtCash.Text.Replace(",", ""), out cash);
+                chan = Math.Round(TotalAmount - cash,2);
+                if ( cash == 99999999)
+                    MessageBox.Show("ERROR: en datos", "Atencion");
+                else
+                if (chan > 0)
                 {
                     Interaction.MsgBox("Insuficient cash to paid the total amount", MsgBoxStyle.Exclamation, "payment");
                     txtCash.Focus();
@@ -69,16 +76,17 @@ namespace Outfit_POS
                         //p.AddTransactionDetails();
                         //p.UpdateProductQuantity();
 
-                        //  frmPrintReceipt pr = new frmPrintReceipt(InvoiceNo);
+                          //frm_PrintReceipt pr = new frm_PrintReceipt(InvoiceNo);
                         //  pr.Show();
 
                         Interaction.MsgBox("Transaction completed. Press OK for a new transaction.", MsgBoxStyle.Information, "Transaction");
                         //p.NewTransaction();
                     }
 
-                    //My.MyProject.Forms.frmPrintReceipt.Show();
-
-                    this.Close();
+                   
+                    // My.MyProject.Forms.frmPrintReceipt.Show();
+                    this.DialogResult = DialogResult.OK;
+                    //this.Close();
                 }
             }
         }
@@ -92,13 +100,13 @@ namespace Outfit_POS
         private void frmPayment_Load_1(object sender, EventArgs e)
         {
             this.Location = new Point(515, 470);
-            txtTA.Text = Strings.FormatNumber(TotalAmount);
+            txtTA.Text = TotalAmount.ToString();// Strings.FormatNumber(TotalAmount);
             txtCash.Text = "";
         }
 
         private void txtCash_TextChanged(object sender, EventArgs e)
         {
-            txtChange.Text = Strings.Format(Conversion.Val(txtCash.Text.Replace(",", "")) - Conversion.Val(txtTA.Text.Replace(",", "")), "#,##0.00");
+            txtChange.Text = Strings.Format(Conversion.Val(txtCash.Text.Replace(",", "")) - Conversion.Val(txtTA.Text.Replace(",", "")));
         }
     }
 }

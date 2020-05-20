@@ -208,11 +208,23 @@
     <Compile Include="frm_POS.Designer.cs">
       <DependentUpon>frm_POS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_PrintReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PrintReceipt.Designer.cs">
+      <DependentUpon>frm_PrintReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ReportDailSalesByInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_ReportDailSalesByInvoice.Designer.cs">
       <DependentUpon>frm_ReportDailSalesByInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ReportDailSalesByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ReportDailSalesByUser.Designer.cs">
+      <DependentUpon>frm_ReportDailSalesByUser.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ReportFilterDailySales.cs">
       <SubType>Form</SubType>
@@ -296,8 +308,26 @@
     <EmbeddedResource Include="frm_POS.resx">
       <DependentUpon>frm_POS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_PrintReceipt.resx">
+      <DependentUpon>frm_PrintReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ReportDailSalesByInvoice.resx">
+      <DependentUpon>frm_ReportDailSalesByInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ReportDailSalesByUser.resx">
+      <DependentUpon>frm_ReportDailSalesByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ReportFilterDailySales.resx">
+      <DependentUpon>frm_ReportFilterDailySales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ReportFilterStocks.resx">
       <DependentUpon>frm_ReportFilterStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ReportStocksIn.resx">
+      <DependentUpon>frm_ReportStocksIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ReportStocksOut.resx">
+      <DependentUpon>frm_ReportStocksOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SystemSetting.resx">
       <DependentUpon>frm_SystemSetting.cs</DependentUpon>
@@ -312,9 +342,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="rptDailySalesReportByInvoiceNo.rdlc" />
-    <EmbeddedResource Include="rptStocksIn.rdlc" />
-    <EmbeddedResource Include="rptStocksOut.rdlc" />
+    <EmbeddedResource Include="rptDailySalesReportByUser.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDailySalesReportByInvoiceNo.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="rptStocksIn.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="rptStocksOut.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="dsReportC.xsc">
       <DependentUpon>dsReportC.xsd</DependentUpon>
     </None>

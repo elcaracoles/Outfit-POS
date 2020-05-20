@@ -92,7 +92,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.picMinimize);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.picClose);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -131,7 +130,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(60, 54);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // picMinimize
             // 
@@ -159,7 +157,6 @@
             this.label1.Size = new System.Drawing.Size(657, 76);
             this.label1.TabIndex = 3;
             this.label1.Text = "OUTFIT POS - VÍCTOR ASIX";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // picClose
             // 
@@ -199,7 +196,6 @@
             this.label11.TabIndex = 11;
             this.label11.Text = "Configuración";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label3
             // 
@@ -320,7 +316,6 @@
             this.lbluser.TabIndex = 8;
             this.lbluser.Text = "Inicio de sesión : ADMIN";
             this.lbluser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbluser.Click += new System.EventHandler(this.lbluser_Click);
             // 
             // btnStocksReport
             // 
@@ -495,7 +490,6 @@
             this.listView1.Size = new System.Drawing.Size(944, 498);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // notifyIcon1
             // 

@@ -44,8 +44,10 @@ namespace Outfit_POS
 
             if (rbUser.Checked == true)
             {
-                Interaction.MsgBox("Message us on our facebook page. https://www.facebook.com/CyberVSS");
+                frm_ReportDailSalesByUser R = new frm_ReportDailSalesByUser(DateTimePicker1.Value);
+                R.Show();
             }
+        
             else
             {
                 frm_ReportDailSalesByInvoice R = new frm_ReportDailSalesByInvoice(DateTimePicker1.Value);

@@ -29,50 +29,53 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsReportC = new Outfit_POS.dsReportC();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.StocksOutBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dsReportC)).BeginInit();
+            this.dsReportC = new Outfit_POS.dsReportC();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.StocksOutBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReportC)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "dsStocksOut";
-            reportDataSource1.Value = this.StocksOutBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "POSMainForm.rptStocksOut.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(602, 381);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // dsReportC
-            // 
-            this.dsReportC.DataSetName = "dsReportC";
-            this.dsReportC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // StocksOutBindingSource
             // 
             this.StocksOutBindingSource.DataMember = "StocksOut";
             this.StocksOutBindingSource.DataSource = this.dsReportC;
             // 
-            // frmReportStocksOut
+            // dsReportC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.dsReportC.DataSetName = "dsReportC";
+            this.dsReportC.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource2.Name = "dsStocksOut";
+            reportDataSource2.Value = this.StocksOutBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "";
+            this.reportViewer1.LocalReport.ReportPath = "rptStocksOut.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(803, 469);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // frm_ReportStocksOut
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 381);
+            this.ClientSize = new System.Drawing.Size(803, 469);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_ReportStocksOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stocks Out Report";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReportStocksOut_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsReportC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StocksOutBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReportC)).EndInit();
             this.ResumeLayout(false);
 
         }

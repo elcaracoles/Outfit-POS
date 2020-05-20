@@ -59,5 +59,10 @@ namespace Outfit_POS
                 Interaction.MsgBox(ex.ToString());
             }
         }
+
+        private void StocksInBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
