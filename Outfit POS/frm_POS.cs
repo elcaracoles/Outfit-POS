@@ -372,6 +372,7 @@ namespace Outfit_POS
             double.TryParse(txtTotalAmount.Text, out total);
             AddTransaction();
             AddTransactionDetails();
+            UpdateProductQuantity();
             frm_Payment pay = new frm_Payment(invoiceNo.Text, total);
             if( pay.ShowDialog(this) == DialogResult.OK) {
             frm_PrintReceipt pr = new frm_PrintReceipt(invoiceNo.Text);//label9.Text);
@@ -463,10 +464,20 @@ namespace Outfit_POS
         {
             try
             {
-                SQLConn.sqL = "";//INSERT INTO PAYMENT(InvoiceNo, Cash, PChange) VALUES('" + InvoiceNo + "', '" + txtCash.Text.Replace(",", "") + "', '" + txtChange.Text.Replace(",", "") + "')";
-                SQLConn.ConnDB();
-                SQLConn.cmd = new MySqlCommand(SQLConn.sqL, SQLConn.conn);
-                SQLConn.cmd.ExecuteNonQuery();
+                string ProductNo, Quantity;
+                foreach (ListViewItem item in listView1.Items)//recorres la lista
+                {
+
+                    ProductNo = item.SubItems[1].Text;
+
+                    Quantity = item.SubItems[4].Text;
+                   
+                    SQLConn.sqL = "update product set StocksOnHand=StocksOnHand-" + Quantity + " where  ProductNo=" + ProductNo;
+                    SQLConn.ConnDB();
+                    SQLConn.cmd = new MySqlCommand(SQLConn.sqL, SQLConn.conn);
+                    SQLConn.cmd.ExecuteNonQuery();
+                                       
+                }
             }
             catch (Exception ex)
             {
