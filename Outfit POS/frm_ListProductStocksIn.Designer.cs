@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -46,11 +47,10 @@
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -59,10 +59,21 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.lblTitle);
             this.panel2.Location = new System.Drawing.Point(-1, -1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(891, 66);
             this.panel2.TabIndex = 12;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Outfit_POS.Properties.Resources.existencias;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 54);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // lblTitle
             // 
@@ -92,9 +103,9 @@
             this.GroupBox1.Controls.Add(this.Label1);
             this.GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(16, 73);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Size = new System.Drawing.Size(856, 398);
             this.GroupBox1.TabIndex = 13;
             this.GroupBox1.TabStop = false;
@@ -104,7 +115,7 @@
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(187, 232);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(181, 27);
             this.txtQuantity.TabIndex = 0;
@@ -225,9 +236,9 @@
             this.GroupBox2.Controls.Add(this.button4);
             this.GroupBox2.Controls.Add(this.button3);
             this.GroupBox2.Location = new System.Drawing.Point(9, 478);
-            this.GroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Size = new System.Drawing.Size(863, 111);
             this.GroupBox2.TabIndex = 14;
             this.GroupBox2.TabStop = false;
@@ -243,7 +254,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.button4.Location = new System.Drawing.Point(746, 20);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 78);
             this.button4.TabIndex = 14;
@@ -261,23 +272,12 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
             this.button3.Location = new System.Drawing.Point(22, 20);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 78);
             this.button3.TabIndex = 13;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Outfit_POS.Properties.Resources.existencias;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 5);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 54);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // frm_ListProductStocksIn
             // 
@@ -289,16 +289,16 @@
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_ListProductStocksIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmListProductStocksIn_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.GroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

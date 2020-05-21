@@ -178,6 +178,12 @@
     <Compile Include="frm_ListProductStocksIn.Designer.cs">
       <DependentUpon>frm_ListProductStocksIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ListReturns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ListReturns.Designer.cs">
+      <DependentUpon>frm_ListReturns.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ListStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,12 @@
     <Compile Include="frm_PrintReceipt.Designer.cs">
       <DependentUpon>frm_PrintReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_PrintReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PrintReturn.Designer.cs">
+      <DependentUpon>frm_PrintReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ReportDailSalesByInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +261,18 @@
     </Compile>
     <Compile Include="frm_ReportStocksOut.Designer.cs">
       <DependentUpon>frm_ReportStocksOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Return.Designer.cs">
+      <DependentUpon>frm_Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Return_Q.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Return_Q.Designer.cs">
+      <DependentUpon>frm_Return_Q.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_SelectCategory.cs">
       <SubType>Form</SubType>
@@ -293,6 +317,9 @@
     <EmbeddedResource Include="frm_ListProductStocksIn.resx">
       <DependentUpon>frm_ListProductStocksIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_ListReturns.resx">
+      <DependentUpon>frm_ListReturns.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ListStaff.resx">
       <DependentUpon>frm_ListStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +338,9 @@
     <EmbeddedResource Include="frm_PrintReceipt.resx">
       <DependentUpon>frm_PrintReceipt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_PrintReturn.resx">
+      <DependentUpon>frm_PrintReturn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ReportDailSalesByInvoice.resx">
       <DependentUpon>frm_ReportDailSalesByInvoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +358,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ReportStocksOut.resx">
       <DependentUpon>frm_ReportStocksOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Return.resx">
+      <DependentUpon>frm_Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Return_Q.resx">
+      <DependentUpon>frm_Return_Q.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SystemSetting.resx">
       <DependentUpon>frm_SystemSetting.cs</DependentUpon>

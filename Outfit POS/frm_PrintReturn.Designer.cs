@@ -1,6 +1,6 @@
 ﻿namespace Outfit_POS
 {
-    partial class frm_PrintReceipt
+    partial class frm_PrintReturn
     {
         /// <summary>
         /// Required designer variable.
@@ -37,17 +37,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.lblReturn = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.CompanyAddress = new System.Windows.Forms.Label();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.lblThank = new System.Windows.Forms.Label();
             this.lblOR = new System.Windows.Forms.Label();
             this.lblLine = new System.Windows.Forms.Label();
-            this.lblChange = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.lblCash = new System.Windows.Forms.Label();
-            this.change = new System.Windows.Forms.Label();
             this.subTotal = new System.Windows.Forms.Label();
-            this.Cash = new System.Windows.Forms.Label();
             this.lblVat = new System.Windows.Forms.Label();
             this.vat = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -66,7 +64,6 @@
             this.CompanyPhoneNo = new System.Windows.Forms.Label();
             this.CompanyName = new System.Windows.Forms.Label();
             this.PrintDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.lblTime = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
@@ -75,10 +72,11 @@
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.White;
+            this.Panel1.Controls.Add(this.lblReturn);
+            this.Panel1.Controls.Add(this.label2);
             this.Panel1.Controls.Add(this.CompanyAddress);
             this.Panel1.Controls.Add(this.Panel2);
             this.Panel1.Controls.Add(this.dgw);
-            this.Panel1.Controls.Add(this.lblTime);
             this.Panel1.Controls.Add(this.lblEmpName);
             this.Panel1.Controls.Add(this.lblDate);
             this.Panel1.Controls.Add(this.Label6);
@@ -91,8 +89,28 @@
             this.Panel1.Location = new System.Drawing.Point(8, 10);
             this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(404, 427);
+            this.Panel1.Size = new System.Drawing.Size(404, 395);
             this.Panel1.TabIndex = 2;
+            // 
+            // lblReturn
+            // 
+            this.lblReturn.AutoSize = true;
+            this.lblReturn.Location = new System.Drawing.Point(330, 138);
+            this.lblReturn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReturn.Name = "lblReturn";
+            this.lblReturn.Size = new System.Drawing.Size(56, 17);
+            this.lblReturn.TabIndex = 48;
+            this.lblReturn.Text = "Return";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(227, 138);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Return No :";
             // 
             // CompanyAddress
             // 
@@ -110,12 +128,8 @@
             this.Panel2.Controls.Add(this.lblThank);
             this.Panel2.Controls.Add(this.lblOR);
             this.Panel2.Controls.Add(this.lblLine);
-            this.Panel2.Controls.Add(this.lblChange);
             this.Panel2.Controls.Add(this.lblSubtotal);
-            this.Panel2.Controls.Add(this.lblCash);
-            this.Panel2.Controls.Add(this.change);
             this.Panel2.Controls.Add(this.subTotal);
-            this.Panel2.Controls.Add(this.Cash);
             this.Panel2.Controls.Add(this.lblVat);
             this.Panel2.Controls.Add(this.vat);
             this.Panel2.Controls.Add(this.lblTotal);
@@ -123,14 +137,14 @@
             this.Panel2.Location = new System.Drawing.Point(12, 230);
             this.Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(375, 190);
+            this.Panel2.Size = new System.Drawing.Size(375, 151);
             this.Panel2.TabIndex = 46;
             // 
             // lblThank
             // 
             this.lblThank.AutoSize = true;
             this.lblThank.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThank.Location = new System.Drawing.Point(80, 166);
+            this.lblThank.Location = new System.Drawing.Point(86, 124);
             this.lblThank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThank.Name = "lblThank";
             this.lblThank.Size = new System.Drawing.Size(195, 17);
@@ -140,7 +154,7 @@
             // lblOR
             // 
             this.lblOR.AutoSize = true;
-            this.lblOR.Location = new System.Drawing.Point(59, 146);
+            this.lblOR.Location = new System.Drawing.Point(65, 104);
             this.lblOR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOR.Name = "lblOR";
             this.lblOR.Size = new System.Drawing.Size(242, 17);
@@ -150,23 +164,12 @@
             // lblLine
             // 
             this.lblLine.AutoSize = true;
-            this.lblLine.Location = new System.Drawing.Point(3, 127);
+            this.lblLine.Location = new System.Drawing.Point(9, 85);
             this.lblLine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLine.Name = "lblLine";
             this.lblLine.Size = new System.Drawing.Size(338, 17);
             this.lblLine.TabIndex = 54;
             this.lblLine.Text = "==============================";
-            // 
-            // lblChange
-            // 
-            this.lblChange.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChange.Location = new System.Drawing.Point(259, 95);
-            this.lblChange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(107, 20);
-            this.lblChange.TabIndex = 48;
-            this.lblChange.Text = "0.00";
-            this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSubtotal
             // 
@@ -179,28 +182,6 @@
             this.lblSubtotal.Text = "0.00";
             this.lblSubtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblCash
-            // 
-            this.lblCash.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCash.Location = new System.Drawing.Point(259, 73);
-            this.lblCash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCash.Name = "lblCash";
-            this.lblCash.Size = new System.Drawing.Size(107, 18);
-            this.lblCash.TabIndex = 50;
-            this.lblCash.Text = "0.00";
-            this.lblCash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // change
-            // 
-            this.change.AutoSize = true;
-            this.change.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.change.Location = new System.Drawing.Point(1, 95);
-            this.change.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.change.Name = "change";
-            this.change.Size = new System.Drawing.Size(127, 23);
-            this.change.TabIndex = 52;
-            this.change.Text = "Change    :";
-            // 
             // subTotal
             // 
             this.subTotal.AutoSize = true;
@@ -211,17 +192,6 @@
             this.subTotal.Size = new System.Drawing.Size(85, 17);
             this.subTotal.TabIndex = 51;
             this.subTotal.Text = "Sub Total :";
-            // 
-            // Cash
-            // 
-            this.Cash.AutoSize = true;
-            this.Cash.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cash.Location = new System.Drawing.Point(1, 73);
-            this.Cash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Cash.Name = "Cash";
-            this.Cash.Size = new System.Drawing.Size(114, 17);
-            this.Cash.TabIndex = 53;
-            this.Cash.Text = "Cash             :";
             // 
             // lblVat
             // 
@@ -247,11 +217,11 @@
             // 
             // lblTotal
             // 
-            this.lblTotal.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotal.Location = new System.Drawing.Point(259, 52);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(107, 16);
+            this.lblTotal.Size = new System.Drawing.Size(107, 23);
             this.lblTotal.TabIndex = 45;
             this.lblTotal.Text = "0.00";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -259,11 +229,11 @@
             // TotalAmount
             // 
             this.TotalAmount.AutoSize = true;
-            this.TotalAmount.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAmount.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold);
             this.TotalAmount.Location = new System.Drawing.Point(1, 52);
             this.TotalAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalAmount.Name = "TotalAmount";
-            this.TotalAmount.Size = new System.Drawing.Size(113, 17);
+            this.TotalAmount.Size = new System.Drawing.Size(172, 23);
             this.TotalAmount.TabIndex = 46;
             this.TotalAmount.Text = "Total Amount :";
             // 
@@ -368,7 +338,7 @@
             // lblEmpName
             // 
             this.lblEmpName.AutoSize = true;
-            this.lblEmpName.Location = new System.Drawing.Point(108, 138);
+            this.lblEmpName.Location = new System.Drawing.Point(73, 138);
             this.lblEmpName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmpName.Name = "lblEmpName";
             this.lblEmpName.Size = new System.Drawing.Size(47, 17);
@@ -448,25 +418,16 @@
             this.CompanyName.Text = "[Company Name Here]";
             this.CompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblTime
-            // 
-            this.lblTime.Location = new System.Drawing.Point(253, 138);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(124, 16);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "Time";
-            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // frm_PrintReceipt
+            // frm_PrintReturn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 444);
+            this.ClientSize = new System.Drawing.Size(421, 413);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frm_PrintReceipt";
+            this.Name = "frm_PrintReturn";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_PrintReturn_FormClosed);
             this.Load += new System.EventHandler(this.frmPrintReceipt_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
@@ -496,18 +457,15 @@
         private System.Windows.Forms.Label lblThank;
         private System.Windows.Forms.Label lblOR;
         private System.Windows.Forms.Label lblLine;
-        private System.Windows.Forms.Label lblChange;
         private System.Windows.Forms.Label lblSubtotal;
-        private System.Windows.Forms.Label lblCash;
-        private System.Windows.Forms.Label change;
         private System.Windows.Forms.Label subTotal;
-        private System.Windows.Forms.Label Cash;
         private System.Windows.Forms.Label lblVat;
         private System.Windows.Forms.Label vat;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label TotalAmount;
         private System.Windows.Forms.Label CompanyAddress;
         private System.Drawing.Printing.PrintDocument PrintDocument1;
-        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblReturn;
+        private System.Windows.Forms.Label label2;
     }
 }

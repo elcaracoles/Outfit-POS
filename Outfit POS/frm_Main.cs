@@ -105,6 +105,10 @@ namespace Outfit_POS
             ss.ShowDialog();
         }
 
-        
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frm_ListReturns lr = new frm_ListReturns(StaffID);
+            lr.ShowDialog();
+        }
     }
 }
