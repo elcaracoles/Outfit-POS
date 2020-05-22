@@ -262,6 +262,12 @@
     <Compile Include="frm_ReportStocksOut.Designer.cs">
       <DependentUpon>frm_ReportStocksOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_reprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reprint.Designer.cs">
+      <DependentUpon>frm_reprint.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Return.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ReportStocksOut.resx">
       <DependentUpon>frm_ReportStocksOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_reprint.resx">
+      <DependentUpon>frm_reprint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Return.resx">
       <DependentUpon>frm_Return.cs</DependentUpon>
