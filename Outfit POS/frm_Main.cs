@@ -105,34 +105,10 @@ namespace Outfit_POS
             ss.ShowDialog();
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbluser_Click(object sender, EventArgs e)
-        {
-
+            frm_ListReturns lr = new frm_ListReturns(StaffID);
+            lr.ShowDialog();
         }
     }
 }

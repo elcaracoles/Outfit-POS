@@ -43,7 +43,7 @@
       </Query>
       <rd:DataSetInfo>
         <rd:DataSetName>dsReportC</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Informatico\Source\Repos\InformaticaRomar\Outfit-POS\Outfit POS\dsReportC.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\PROJECT\2016 PROJECT\HAREN NAIDOO\POSMain\POSMainForm\dsReportC.xsd</rd:SchemaPath>
         <rd:TableName>StocksOut</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

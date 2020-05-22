@@ -17,6 +17,7 @@ namespace Outfit_POS
     {
         string Username;
         int StaffID;
+        Boolean grabado;
         string nInvoice;
         public frm_POS()
         {
@@ -98,8 +99,9 @@ namespace Outfit_POS
             InitializeComponent();
             textBox8.Text = Username;
             textBox7.Text = get_Role();
-            label9.Text = nInvoice;
-           
+            invoiceNo.Text = nInvoice;
+            grabado = false;
+
         }
      
         private void button1_Click(object sender, EventArgs e)
@@ -108,18 +110,18 @@ namespace Outfit_POS
             ListViewItem x = null;
             x = new ListViewItem((listView1.Items.Count +1).ToString());
             x.SubItems.Add(label18.Text);
-            x.SubItems.Add(textBox3.Text);
-            x.SubItems.Add(textBox4.Text);
-            x.SubItems.Add(textBox5.Text);
-            x.SubItems.Add(textBox6.Text);
+            x.SubItems.Add(txtDescrip.Text);
+            x.SubItems.Add(txtPrice.Text);
+            x.SubItems.Add(txtCant.Text);
+            x.SubItems.Add(txtTotal.Text);
             x.SubItems.Add("0");
             
             listView1.Items.Add(x);
-            textBox12.Text = total_e().ToString();
+            txtTotalAmount.Text = total_e().ToString();
             textBox10.Text = total_p().ToString();
             ch_texbox();
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
           
@@ -146,9 +148,9 @@ namespace Outfit_POS
                 MessageBox.Show("Por favor seleccione el registro para Eliminar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            textBox12.Text = total_e().ToString();
+            txtTotalAmount.Text = total_e().ToString();
             textBox10.Text = total_p().ToString();
-            textBox1.Focus();
+            txtBar.Focus();
 
         }
 
@@ -161,41 +163,41 @@ namespace Outfit_POS
         {
             if (e.KeyCode == Keys.Enter) {
                
-                product pr = new product(textBox2.Text, 1);
+                product pr = new product(txtCodprod.Text, 1);
                 fill_Product(pr);
                
                 ch_texbox();
             }
         }
         private void ch_texbox() {
-            if (textBox2.Enabled == true && textBox1.Enabled == true && textBox5.ReadOnly == true)
+            if (txtCodprod.Enabled == true && txtBar.Enabled == true && txtCant.ReadOnly == true)
             {
 
                
-                textBox2.Enabled = false;
-                textBox1.Enabled = false;
+                txtCodprod.Enabled = false;
+                txtBar.Enabled = false;
                 
-                textBox5.ReadOnly = false;
-                textBox5.Focus();
+                txtCant.ReadOnly = false;
+                txtCant.Focus();
             }
             else {
-                textBox2.Enabled = true;
-                textBox1.Enabled = true;
-                textBox5.ReadOnly = true ;
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox5.Text = "1";
-                textBox1.Focus();
+                txtCodprod.Enabled = true;
+                txtBar.Enabled = true;
+                txtCant.ReadOnly = true ;
+                txtBar.Text = "";
+                txtCodprod.Text = "";
+                txtCant.Text = "1";
+                txtBar.Focus();
 
             }
         }
 
         private void fill_Product(product pr) {
             if (pr.StocksOnHand > 0) { 
-            textBox1.Text = pr.Barcode;
-            textBox2.Text = pr.ProductCode;
-            textBox3.Text = pr.Description;
-            textBox4.Text = pr.UnitPrice.ToString();
+            txtBar.Text = pr.Barcode;
+            txtCodprod.Text = pr.ProductCode;
+            txtDescrip.Text = pr.Description;
+            txtPrice.Text = pr.UnitPrice.ToString();
             label18.Text = pr.ProductNo.ToString();
             }
             else
@@ -231,7 +233,7 @@ namespace Outfit_POS
             if (e.KeyCode == Keys.Enter)
             {
 
-                product pr = new product(textBox1.Text, 2);
+                product pr = new product(txtBar.Text, 2);
                 fill_Product(pr);
 
                 ch_texbox();
@@ -246,10 +248,10 @@ namespace Outfit_POS
                 int Cantidad = 0;
                 double total = 0;
                
-                double.TryParse(textBox4.Text,out precioU);
-                int.TryParse(textBox5.Text, out Cantidad);
+                double.TryParse(txtPrice.Text,out precioU);
+                int.TryParse(txtCant.Text, out Cantidad);
                 total = precioU * Cantidad;
-                textBox6.Text = total.ToString();
+                txtTotal.Text = total.ToString();
                 button1.Focus();
                 // ch_texbox();
             }
@@ -271,10 +273,10 @@ namespace Outfit_POS
         private void button5_Click(object sender, EventArgs e)
         {
             string InvoiceNo,ProductNo, ItemPrice, Quantity, Discount, NonVatTotal, VatAmount, TotalAmount;
-            InvoiceNo = label9.Text;
-            NonVatTotal = textBox9.Text;
-            VatAmount = textBox11.Text;
-            TotalAmount = textBox12.Text;
+            InvoiceNo = invoiceNo.Text;
+            NonVatTotal = txtVatAmount.Text;
+            VatAmount = txtNonVatTotal.Text;
+            TotalAmount = txtTotalAmount.Text;
             try
             {
                 SQLConn.sqL = "insert into transactions (InvoiceNo,TDate,TTime,NonVatTotal,VatAmount,TotalAmount,StaffID) values (" + InvoiceNo + ",date(Now()),time(Now())," + NonVatTotal + "," + VatAmount + "," + TotalAmount + "," + StaffID.ToString() + ")";
@@ -311,17 +313,17 @@ namespace Outfit_POS
         }
         private void limpiar() {
             listView1.Items.Clear();
-            label9.Text = get_Invoice();
-            textBox3.Text = "";
-            textBox4.Text = "0.00";
-            textBox5.Text = "1";
-            textBox6.Text = "0";
-            textBox9.Text = "0";
+            invoiceNo.Text = get_Invoice();
+            txtDescrip.Text = "";
+            txtPrice.Text = "0.00";
+            txtCant.Text = "1";
+            txtTotal.Text = "0";
+            txtVatAmount.Text = "0";
             textBox10.Text = "0";
-            textBox11.Text = "0";
-            textBox12.Text = "0";
+            txtNonVatTotal.Text = "0";
+            txtTotalAmount.Text = "0";
 
-            textBox1.Focus();
+            txtBar.Focus();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -331,8 +333,8 @@ namespace Outfit_POS
             if (fndProduct.ShowDialog(this) == DialogResult.OK)
             {
                 // Read the contents of testDialog's TextBox.
-                this.textBox2.Text = fndProduct.productID.ToString();
-                product pr = new product(textBox2.Text, 1);
+                this.txtCodprod.Text = fndProduct.productID.ToString();
+                product pr = new product(txtCodprod.Text, 1);
                 fill_Product(pr);
 
                 ch_texbox();
@@ -340,7 +342,7 @@ namespace Outfit_POS
             }
             else
             {
-                this.textBox2.Text = "";
+                this.txtCodprod.Text = "";
             }
             fndProduct.Dispose();
         }
@@ -353,13 +355,13 @@ namespace Outfit_POS
             {
                 // Read the contents of testDialog's TextBox.
                 this.textBox13.Text = fDiscount.discount.ToString();
-                textBox12.Text = total_e().ToString();
+                txtTotalAmount.Text = total_e().ToString();
                 textBox10.Text = total_p().ToString();
 
             }
             else
             {
-                this.textBox2.Text = "";
+                this.txtCodprod.Text = "";
             }
            
         }
@@ -367,11 +369,127 @@ namespace Outfit_POS
         private void button3_Click(object sender, EventArgs e)
         {
             double total = 0;
-            double.TryParse(textBox12.Text, out total);
-            frm_Payment pay = new frm_Payment(label9.Text, total);
-            pay.ShowDialog();
+            double.TryParse(txtTotalAmount.Text, out total);
+            AddTransaction();
+            AddTransactionDetails();
+            UpdateProductQuantity();
+            frm_Payment pay = new frm_Payment(invoiceNo.Text, total);
+            if( pay.ShowDialog(this) == DialogResult.OK) {
+            frm_PrintReceipt pr = new frm_PrintReceipt(invoiceNo.Text);//label9.Text);
+                pr.ShowDialog();
+
+           }
+            
 
         }
+        #region transacciones
+        private void AddTransaction()
+        {
+            string InvoiceNo,  NonVatTotal, VatAmount, TotalAmount;
+            InvoiceNo = invoiceNo.Text;
+            NonVatTotal = txtVatAmount.Text;
+            VatAmount = txtNonVatTotal.Text;
+            TotalAmount = txtTotalAmount.Text;
+            try
+            {
+                 SQLConn.ConnDB();
+                SQLConn.cmd.Connection = SQLConn.conn;
+                SQLConn.cmd.CommandText = "SELECT COUNT(*) FROM transactions where InvoiceNo=" + InvoiceNo;
+                //string result = cConvert.ToInt32(SQLConn.cmd.ExecuteScalar());// .ToString();
+                Int32 count = Convert.ToInt32(SQLConn.cmd.ExecuteScalar());// (Int32)SQLConn.cmd.ExecuteScalar();
+                if (count == 0)
+                    SQLConn.sqL = "insert into transactions (InvoiceNo,TDate,TTime,NonVatTotal,VatAmount,TotalAmount,StaffID) values (" + InvoiceNo + ",DATE_FORMAT(NOW(), '%m/%d/%Y'),time(Now())," + NonVatTotal + "," + VatAmount + "," + TotalAmount + "," + StaffID.ToString() + ")";
+                else
+
+                    SQLConn.sqL = "update transactions set TDate=DATE_FORMAT(NOW(), '%m/%d/%Y'),TTime=time(Now()), NonVatTotal=" + NonVatTotal + ", VatAmount=" + VatAmount + ", TotalAmount=" + TotalAmount + " where InvoiceNo=" + InvoiceNo ;
+
+                
+                SQLConn.cmd = new MySqlCommand(SQLConn.sqL, SQLConn.conn);
+                SQLConn.cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                SQLConn.cmd.Dispose();
+                SQLConn.conn.Close();
+            }
+        }
+        private void AddTransactionDetails()
+        {
+            string ProductNo, ItemPrice, Quantity, Discount;
+            try
+            {
+                foreach (ListViewItem item in listView1.Items)//recorres la lista
+                {
+
+                    ProductNo = item.SubItems[1].Text;
+                    ItemPrice = item.SubItems[3].Text;
+                    Quantity = item.SubItems[4].Text;
+                    Discount = item.SubItems[6].Text;
+                    SQLConn.ConnDB();
+                    SQLConn.cmd.Connection = SQLConn.conn;
+                    SQLConn.cmd.CommandText = "SELECT COUNT(*) FROM transactiondetails where InvoiceNo=" + invoiceNo.Text+ " and ProductNo="+ProductNo;
+                    Int32 count = Convert.ToInt32(SQLConn.cmd.ExecuteScalar());
+                    if (count == 0)
+                        SQLConn.sqL = "insert into transactiondetails (InvoiceNo,ProductNo,ItemPrice,Quantity,Discount) values (" + invoiceNo.Text + "," + ProductNo + "," + ItemPrice + "," + Quantity + "," + Discount + ")";
+
+                    else
+                        SQLConn.sqL = "update transactions set ItemPrice=" + ItemPrice + ", Quantity=" + Quantity + ", Discount=" + Discount + " where InvoiceNo=" + invoiceNo.Text + "and ProductNo=" + ProductNo;
+
+
+
+                   // SQLConn.ConnDB();
+                    SQLConn.cmd = new MySqlCommand(SQLConn.sqL, SQLConn.conn);
+                    SQLConn.cmd.ExecuteNonQuery();
+
+
+
+                }
+             
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                SQLConn.cmd.Dispose();
+                SQLConn.conn.Close();
+            }
+        }
+        private void UpdateProductQuantity()
+        {
+            try
+            {
+                string ProductNo, Quantity;
+                foreach (ListViewItem item in listView1.Items)//recorres la lista
+                {
+
+                    ProductNo = item.SubItems[1].Text;
+
+                    Quantity = item.SubItems[4].Text;
+                   
+                    SQLConn.sqL = "update product set StocksOnHand=StocksOnHand-" + Quantity + " where  ProductNo=" + ProductNo;
+                    SQLConn.ConnDB();
+                    SQLConn.cmd = new MySqlCommand(SQLConn.sqL, SQLConn.conn);
+                    SQLConn.cmd.ExecuteNonQuery();
+                                       
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                SQLConn.cmd.Dispose();
+                SQLConn.conn.Close();
+            }
+        }
+        #endregion
     }
     class product {
         #region prop product
