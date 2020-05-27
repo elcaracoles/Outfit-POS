@@ -490,6 +490,12 @@ namespace Outfit_POS
             }
         }
         #endregion
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frm_reprint print = new frm_reprint();
+            print.ShowDialog();
+        }
     }
     class product {
         #region prop product
