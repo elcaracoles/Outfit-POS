@@ -67,9 +67,9 @@
             this.GroupBox1.Controls.Add(this.Label1);
             this.GroupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(12, 84);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Size = new System.Drawing.Size(439, 298);
             this.GroupBox1.TabIndex = 27;
             this.GroupBox1.TabStop = false;
@@ -84,7 +84,7 @@
             this.cmdSave.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.cmdSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdSave.Location = new System.Drawing.Point(168, 206);
-            this.cmdSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdSave.Margin = new System.Windows.Forms.Padding(4);
             this.cmdSave.Name = "cmdSave";
             this.cmdSave.Size = new System.Drawing.Size(100, 78);
             this.cmdSave.TabIndex = 22;
@@ -95,8 +95,8 @@
             // txtServerHost
             // 
             this.txtServerHost.BackColor = System.Drawing.Color.White;
-            this.txtServerHost.Location = new System.Drawing.Point(154, 40);
-            this.txtServerHost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtServerHost.Location = new System.Drawing.Point(168, 40);
+            this.txtServerHost.Margin = new System.Windows.Forms.Padding(4);
             this.txtServerHost.Name = "txtServerHost";
             this.txtServerHost.Size = new System.Drawing.Size(231, 24);
             this.txtServerHost.TabIndex = 0;
@@ -110,7 +110,7 @@
             this.cmdClose.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdClose.Location = new System.Drawing.Point(276, 206);
-            this.cmdClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdClose.Margin = new System.Windows.Forms.Padding(4);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(100, 78);
             this.cmdClose.TabIndex = 23;
@@ -127,7 +127,7 @@
             this.cmdTest.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.cmdTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdTest.Location = new System.Drawing.Point(60, 206);
-            this.cmdTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdTest.Margin = new System.Windows.Forms.Padding(4);
             this.cmdTest.Name = "cmdTest";
             this.cmdTest.Size = new System.Drawing.Size(100, 78);
             this.cmdTest.TabIndex = 21;
@@ -138,8 +138,8 @@
             // txtUserName
             // 
             this.txtUserName.BackColor = System.Drawing.Color.White;
-            this.txtUserName.Location = new System.Drawing.Point(154, 103);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Location = new System.Drawing.Point(168, 103);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(231, 24);
             this.txtUserName.TabIndex = 2;
@@ -187,8 +187,8 @@
             // txtPort
             // 
             this.txtPort.BackColor = System.Drawing.Color.White;
-            this.txtPort.Location = new System.Drawing.Point(154, 71);
-            this.txtPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPort.Location = new System.Drawing.Point(168, 71);
+            this.txtPort.Margin = new System.Windows.Forms.Padding(4);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(231, 24);
             this.txtPort.TabIndex = 1;
@@ -196,8 +196,8 @@
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(154, 136);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(168, 136);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(231, 24);
@@ -206,8 +206,8 @@
             // txtDatabase
             // 
             this.txtDatabase.BackColor = System.Drawing.Color.White;
-            this.txtDatabase.Location = new System.Drawing.Point(154, 165);
-            this.txtDatabase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDatabase.Location = new System.Drawing.Point(168, 165);
+            this.txtDatabase.Margin = new System.Windows.Forms.Padding(4);
             this.txtDatabase.Name = "txtDatabase";
             this.txtDatabase.Size = new System.Drawing.Size(231, 24);
             this.txtDatabase.TabIndex = 4;
@@ -230,7 +230,7 @@
             this.Panel1.Controls.Add(this.Label6);
             this.Panel1.Font = new System.Drawing.Font("Segoe Print", 7.8F);
             this.Panel1.Location = new System.Drawing.Point(-28, -1);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(673, 68);
             this.Panel1.TabIndex = 28;
@@ -256,7 +256,7 @@
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_DatabaseConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmDatabaseConfig_Load);

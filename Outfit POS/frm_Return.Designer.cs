@@ -36,6 +36,7 @@
             this.ColumnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ToolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -46,6 +47,8 @@
             this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ListView1 = new System.Windows.Forms.ListView();
             this.ColumnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,9 +58,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TabControl1.SuspendLayout();
             this.TabPage1.SuspendLayout();
             this.ToolStrip1.SuspendLayout();
@@ -138,6 +138,11 @@
             this.columnHeader9.Text = "Extended Price";
             this.columnHeader9.Width = 120;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Returned";
+            this.columnHeader1.Width = 102;
+            // 
             // ColumnHeader2
             // 
             this.ColumnHeader2.Text = "Invoice Date";
@@ -150,7 +155,7 @@
             this.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButton2.Name = "ToolStripButton2";
             this.ToolStripButton2.Size = new System.Drawing.Size(65, 40);
-            this.ToolStripButton2.Text = "&R&efresh";
+            this.ToolStripButton2.Text = "Refrescar";
             this.ToolStripButton2.Click += new System.EventHandler(this.ToolStripButton2_Click);
             // 
             // ToolStrip1
@@ -173,7 +178,7 @@
             // ToolStripLabel1
             // 
             this.ToolStripLabel1.Name = "ToolStripLabel1";
-            this.ToolStripLabel1.Size = new System.Drawing.Size(21, 46);
+            this.ToolStripLabel1.Size = new System.Drawing.Size(21, 49);
             this.ToolStripLabel1.Text = "   ";
             // 
             // ToolStripButton4
@@ -183,7 +188,7 @@
             this.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButton4.Name = "ToolStripButton4";
             this.ToolStripButton4.Size = new System.Drawing.Size(65, 40);
-            this.ToolStripButton4.Text = "&Save";
+            this.ToolStripButton4.Text = "Guardar";
             this.ToolStripButton4.ToolTipText = "Save";
             this.ToolStripButton4.Click += new System.EventHandler(this.ToolStripButton4_Click);
             // 
@@ -194,7 +199,7 @@
             this.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButton1.Name = "ToolStripButton1";
             this.ToolStripButton1.Size = new System.Drawing.Size(65, 40);
-            this.ToolStripButton1.Text = "Clos&e";
+            this.ToolStripButton1.Text = "Cerrar";
             this.ToolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // ColumnHeader5
@@ -230,12 +235,23 @@
             this.ListView1.TabIndex = 39;
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
+            this.ListView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             this.ListView1.Click += new System.EventHandler(this.ListView1_Click);
             // 
             // ColumnHeader7
             // 
             this.ColumnHeader7.Text = "Invoice No";
             this.ColumnHeader7.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Vat Amount";
+            this.columnHeader6.Width = 96;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Not VAT Amount";
+            this.columnHeader10.Width = 136;
             // 
             // columnHeader8
             // 
@@ -258,17 +274,17 @@
             this.GroupBox1.Size = new System.Drawing.Size(1172, 69);
             this.GroupBox1.TabIndex = 41;
             this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Search Return";
+            this.GroupBox1.Text = "Buscar Devolución";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(223, 27);
+            this.label3.Location = new System.Drawing.Point(223, 30);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 17);
+            this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "To :";
+            this.label3.Text = "Hasta :";
             // 
             // label2
             // 
@@ -276,15 +292,15 @@
             this.label2.Location = new System.Drawing.Point(8, 30);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "From :";
+            this.label2.Text = "Desde :";
             // 
             // dtEndDate
             // 
             this.dtEndDate.CustomFormat = "MM/dd/yyyy";
             this.dtEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEndDate.Location = new System.Drawing.Point(265, 27);
+            this.dtEndDate.Location = new System.Drawing.Point(290, 27);
             this.dtEndDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtEndDate.Name = "dtEndDate";
             this.dtEndDate.Size = new System.Drawing.Size(135, 24);
@@ -305,7 +321,7 @@
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(501, 27);
+            this.txtName.Location = new System.Drawing.Point(521, 27);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(391, 24);
@@ -314,12 +330,12 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(416, 31);
+            this.Label1.Location = new System.Drawing.Point(441, 30);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(68, 17);
+            this.Label1.Size = new System.Drawing.Size(70, 17);
             this.Label1.TabIndex = 0;
-            this.Label1.Text = "Invoice :";
+            this.Label1.Text = "Factura :";
             // 
             // label4
             // 
@@ -331,22 +347,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(288, 52);
             this.label4.TabIndex = 42;
-            this.label4.Text = "Nueva Devolucion";
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Returned";
-            this.columnHeader1.Width = 102;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Vat Amount";
-            this.columnHeader6.Width = 96;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Not VAT Amount";
-            this.columnHeader10.Width = 136;
+            this.label4.Text = "Nueva Devolución";
             // 
             // frm_Return
             // 

@@ -296,7 +296,7 @@
             // 
             // txtPercent
             // 
-            this.txtPercent.Location = new System.Drawing.Point(156, 36);
+            this.txtPercent.Location = new System.Drawing.Point(173, 39);
             this.txtPercent.Margin = new System.Windows.Forms.Padding(4);
             this.txtPercent.Name = "txtPercent";
             this.txtPercent.Size = new System.Drawing.Size(111, 24);

@@ -50,6 +50,7 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtEndDate = new System.Windows.Forms.DateTimePicker();
@@ -57,7 +58,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.TabControl1.SuspendLayout();
             this.TabPage1.SuspendLayout();
             this.ToolStrip1.SuspendLayout();
@@ -155,7 +155,7 @@
             this.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButton2.Name = "ToolStripButton2";
             this.ToolStripButton2.Size = new System.Drawing.Size(65, 40);
-            this.ToolStripButton2.Text = "&R&efresh";
+            this.ToolStripButton2.Text = "Refrescar";
             this.ToolStripButton2.Click += new System.EventHandler(this.ToolStripButton2_Click);
             // 
             // ToolStrip1
@@ -187,7 +187,7 @@
             this.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButton1.Name = "ToolStripButton1";
             this.ToolStripButton1.Size = new System.Drawing.Size(65, 40);
-            this.ToolStripButton1.Text = "Clos&e";
+            this.ToolStripButton1.Text = "Cerrar";
             this.ToolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // ColumnHeader5
@@ -262,33 +262,45 @@
             this.GroupBox1.Size = new System.Drawing.Size(1172, 69);
             this.GroupBox1.TabIndex = 41;
             this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Search Return";
+            this.GroupBox1.Text = "Buscar Ticket";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(980, 34);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(112, 17);
+            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Imprimir Ticket";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(223, 27);
+            this.label3.Location = new System.Drawing.Point(219, 31);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 17);
+            this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "To :";
+            this.label3.Text = "Hasta :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 30);
+            this.label2.Location = new System.Drawing.Point(8, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "From :";
+            this.label2.Text = "Desde :";
             // 
             // dtEndDate
             // 
             this.dtEndDate.CustomFormat = "MM/dd/yyyy";
             this.dtEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEndDate.Location = new System.Drawing.Point(265, 27);
+            this.dtEndDate.Location = new System.Drawing.Point(286, 28);
             this.dtEndDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtEndDate.Name = "dtEndDate";
             this.dtEndDate.Size = new System.Drawing.Size(135, 24);
@@ -299,7 +311,7 @@
             // 
             this.dtStartDate.CustomFormat = "MM/dd/yyyy";
             this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtStartDate.Location = new System.Drawing.Point(79, 27);
+            this.dtStartDate.Location = new System.Drawing.Point(71, 28);
             this.dtStartDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(140, 24);
@@ -318,12 +330,12 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(416, 31);
+            this.Label1.Location = new System.Drawing.Point(425, 31);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(68, 17);
+            this.Label1.Size = new System.Drawing.Size(70, 17);
             this.Label1.TabIndex = 0;
-            this.Label1.Text = "Invoice :";
+            this.Label1.Text = "Factura :";
             // 
             // label4
             // 
@@ -336,18 +348,6 @@
             this.label4.Size = new System.Drawing.Size(310, 52);
             this.label4.TabIndex = 42;
             this.label4.Text = "Re Imprimir ticket";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(993, 34);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(86, 17);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Print Ticket";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // frm_reprint
             // 
