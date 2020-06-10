@@ -183,13 +183,13 @@ namespace Outfit_POS
         {
             if (SQLConn.adding == true)
             {
-                lblTitle.Text = "Adding New Staff";
+                lblTitle.Text = "Añadir nuevo Personal";
                 ClearFields();
                 GetStaffID();
             }
             else
             {
-                lblTitle.Text = "Updating Staff";
+                lblTitle.Text = "Actualizar Personal";
                 LoadUpdateStaff();
 
             }

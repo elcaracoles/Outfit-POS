@@ -57,6 +57,7 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTime = new System.Windows.Forms.Label();
             this.lblEmpName = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.CompanyPhoneNo = new System.Windows.Forms.Label();
             this.CompanyName = new System.Windows.Forms.Label();
             this.PrintDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.lblTime = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
@@ -130,22 +130,22 @@
             // 
             this.lblThank.AutoSize = true;
             this.lblThank.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThank.Location = new System.Drawing.Point(80, 166);
+            this.lblThank.Location = new System.Drawing.Point(52, 167);
             this.lblThank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThank.Name = "lblThank";
-            this.lblThank.Size = new System.Drawing.Size(195, 17);
+            this.lblThank.Size = new System.Drawing.Size(251, 17);
             this.lblThank.TabIndex = 55;
-            this.lblThank.Text = "Thank You Come Again!";
+            this.lblThank.Text = "¡GRACIAS, VUELVA OTRA VEZ!";
             // 
             // lblOR
             // 
             this.lblOR.AutoSize = true;
-            this.lblOR.Location = new System.Drawing.Point(59, 146);
+            this.lblOR.Location = new System.Drawing.Point(61, 146);
             this.lblOR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOR.Name = "lblOR";
-            this.lblOR.Size = new System.Drawing.Size(242, 17);
+            this.lblOR.Size = new System.Drawing.Size(227, 17);
             this.lblOR.TabIndex = 56;
-            this.lblOR.Text = "THIS IS YOUR OFFICIAL RECEPIT";
+            this.lblOR.Text = "ESTA ES SU FACTURA OFICIAL";
             // 
             // lblLine
             // 
@@ -197,9 +197,9 @@
             this.change.Location = new System.Drawing.Point(1, 95);
             this.change.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.change.Name = "change";
-            this.change.Size = new System.Drawing.Size(127, 23);
+            this.change.Size = new System.Drawing.Size(105, 23);
             this.change.TabIndex = 52;
-            this.change.Text = "Change    :";
+            this.change.Text = "Cambio :";
             // 
             // subTotal
             // 
@@ -219,9 +219,9 @@
             this.Cash.Location = new System.Drawing.Point(1, 73);
             this.Cash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Cash.Name = "Cash";
-            this.Cash.Size = new System.Drawing.Size(114, 17);
+            this.Cash.Size = new System.Drawing.Size(74, 17);
             this.Cash.TabIndex = 53;
-            this.Cash.Text = "Cash             :";
+            this.Cash.Text = "Efectivo :";
             // 
             // lblVat
             // 
@@ -263,9 +263,10 @@
             this.TotalAmount.Location = new System.Drawing.Point(1, 52);
             this.TotalAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalAmount.Name = "TotalAmount";
-            this.TotalAmount.Size = new System.Drawing.Size(113, 17);
+            this.TotalAmount.Size = new System.Drawing.Size(119, 17);
             this.TotalAmount.TabIndex = 46;
-            this.TotalAmount.Text = "Total Amount :";
+            this.TotalAmount.Text = "Cantidad Total :";
+            this.TotalAmount.Click += new System.EventHandler(this.TotalAmount_Click);
             // 
             // dgw
             // 
@@ -365,6 +366,16 @@
             this.Amount.ReadOnly = true;
             this.Amount.Width = 70;
             // 
+            // lblTime
+            // 
+            this.lblTime.Location = new System.Drawing.Point(253, 138);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(124, 16);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "Time";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // lblEmpName
             // 
             this.lblEmpName.AutoSize = true;
@@ -388,12 +399,12 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(5, 138);
+            this.Label6.Location = new System.Drawing.Point(8, 138);
             this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(71, 17);
+            this.Label6.Size = new System.Drawing.Size(65, 17);
             this.Label6.TabIndex = 1;
-            this.Label6.Text = "Cashier :";
+            this.Label6.Text = "Cajero :";
             // 
             // lblInvoice
             // 
@@ -411,31 +422,31 @@
             this.Label4.Location = new System.Drawing.Point(5, 119);
             this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(92, 17);
+            this.Label4.Size = new System.Drawing.Size(94, 17);
             this.Label4.TabIndex = 1;
-            this.Label4.Text = "Invoice No :";
+            this.Label4.Text = "No Factura :";
             // 
             // CompanyTINNumber
             // 
             this.CompanyTINNumber.AutoSize = true;
             this.CompanyTINNumber.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompanyTINNumber.Location = new System.Drawing.Point(103, 82);
+            this.CompanyTINNumber.Location = new System.Drawing.Point(128, 82);
             this.CompanyTINNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CompanyTINNumber.Name = "CompanyTINNumber";
             this.CompanyTINNumber.Size = new System.Drawing.Size(149, 17);
             this.CompanyTINNumber.TabIndex = 0;
-            this.CompanyTINNumber.Text = "TIN#: 119-239-518";
+            this.CompanyTINNumber.Text = "TIN#: 112-334-566";
             // 
             // CompanyPhoneNo
             // 
             this.CompanyPhoneNo.AutoSize = true;
             this.CompanyPhoneNo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompanyPhoneNo.Location = new System.Drawing.Point(76, 64);
+            this.CompanyPhoneNo.Location = new System.Drawing.Point(107, 65);
             this.CompanyPhoneNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CompanyPhoneNo.Name = "CompanyPhoneNo";
-            this.CompanyPhoneNo.Size = new System.Drawing.Size(207, 17);
+            this.CompanyPhoneNo.Size = new System.Drawing.Size(193, 17);
             this.CompanyPhoneNo.TabIndex = 0;
-            this.CompanyPhoneNo.Text = "Contact No : 796-434-9402";
+            this.CompanyPhoneNo.Text = "No Contacto : 672200252";
             // 
             // CompanyName
             // 
@@ -447,16 +458,6 @@
             this.CompanyName.TabIndex = 0;
             this.CompanyName.Text = "[Company Name Here]";
             this.CompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTime
-            // 
-            this.lblTime.Location = new System.Drawing.Point(253, 138);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(124, 16);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "Time";
-            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frm_PrintReceipt
             // 

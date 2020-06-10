@@ -108,6 +108,7 @@
             this.ListView2.TabIndex = 37;
             this.ListView2.UseCompatibleStateImageBehavior = false;
             this.ListView2.View = System.Windows.Forms.View.Details;
+            this.ListView2.SelectedIndexChanged += new System.EventHandler(this.ListView2_SelectedIndexChanged);
             // 
             // ColumnHeader11
             // 
@@ -146,7 +147,7 @@
             this.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButton2.Name = "ToolStripButton2";
             this.ToolStripButton2.Size = new System.Drawing.Size(65, 40);
-            this.ToolStripButton2.Text = "&R&efresh";
+            this.ToolStripButton2.Text = "Refrescar";
             this.ToolStripButton2.Click += new System.EventHandler(this.ToolStripButton2_Click);
             // 
             // ToolStrip1
@@ -179,7 +180,7 @@
             this.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButton4.Name = "ToolStripButton4";
             this.ToolStripButton4.Size = new System.Drawing.Size(65, 40);
-            this.ToolStripButton4.Text = "New &Return";
+            this.ToolStripButton4.Text = "Devolución";
             this.ToolStripButton4.Click += new System.EventHandler(this.ToolStripButton4_Click);
             // 
             // ToolStripButton1
@@ -189,7 +190,7 @@
             this.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButton1.Name = "ToolStripButton1";
             this.ToolStripButton1.Size = new System.Drawing.Size(65, 40);
-            this.ToolStripButton1.Text = "Clos&e";
+            this.ToolStripButton1.Text = "Cerrar";
             this.ToolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // ColumnHeader1
@@ -264,19 +265,19 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(1055, 31);
+            this.linkLabel1.Location = new System.Drawing.Point(998, 33);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(93, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(147, 17);
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Print Return";
+            this.linkLabel1.Text = "Imprimir Devolución";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(223, 27);
+            this.label3.Location = new System.Drawing.Point(227, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 17);
@@ -286,18 +287,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 30);
+            this.label2.Location = new System.Drawing.Point(0, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "From :";
+            this.label2.Text = "Desde:";
             // 
             // dtEndDate
             // 
             this.dtEndDate.CustomFormat = "MM/dd/yyyy";
             this.dtEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEndDate.Location = new System.Drawing.Point(265, 27);
+            this.dtEndDate.Location = new System.Drawing.Point(273, 27);
             this.dtEndDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtEndDate.Name = "dtEndDate";
             this.dtEndDate.Size = new System.Drawing.Size(135, 24);
@@ -328,12 +329,12 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(416, 31);
+            this.Label1.Location = new System.Drawing.Point(416, 33);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(68, 17);
+            this.Label1.Size = new System.Drawing.Size(65, 17);
             this.Label1.TabIndex = 0;
-            this.Label1.Text = "Invoice :";
+            this.Label1.Text = "Factura:";
             // 
             // frm_ListReturns
             // 

@@ -133,5 +133,10 @@ namespace Outfit_POS
             PageSetupDialog aPS = new PageSetupDialog();
             aPS.Document = PrintDocument1;
         }
+
+        private void TotalAmount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

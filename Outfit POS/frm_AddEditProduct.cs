@@ -167,13 +167,13 @@ namespace Outfit_POS
         {
             if (SQLConn.adding == true)
             {
-                lblTitle.Text = "Adding New Product";
+                lblTitle.Text = "Añadir Nuevo Producto";
                 ClearFields();
                 GetProductNo();
             }
             else
             {
-                lblTitle.Text = "Updating Product";
+                lblTitle.Text = "Editar Producto";
                 LoadUpdateCategory();
             }
         }
@@ -238,6 +238,11 @@ namespace Outfit_POS
         }
 
         private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
         {
 
         }

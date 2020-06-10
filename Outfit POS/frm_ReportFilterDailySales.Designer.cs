@@ -62,13 +62,13 @@
             // rbInvoice
             // 
             this.rbInvoice.AutoSize = true;
-            this.rbInvoice.Location = new System.Drawing.Point(157, 89);
+            this.rbInvoice.Location = new System.Drawing.Point(170, 89);
             this.rbInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.rbInvoice.Name = "rbInvoice";
-            this.rbInvoice.Size = new System.Drawing.Size(129, 21);
+            this.rbInvoice.Size = new System.Drawing.Size(88, 21);
             this.rbInvoice.TabIndex = 5;
             this.rbInvoice.TabStop = true;
-            this.rbInvoice.Text = "Invoice - Wise";
+            this.rbInvoice.Text = "Facturas";
             this.rbInvoice.UseVisualStyleBackColor = true;
             this.rbInvoice.CheckedChanged += new System.EventHandler(this.rbInvoice_CheckedChanged);
             // 
@@ -78,10 +78,10 @@
             this.rbUser.Location = new System.Drawing.Point(15, 89);
             this.rbUser.Margin = new System.Windows.Forms.Padding(4);
             this.rbUser.Name = "rbUser";
-            this.rbUser.Size = new System.Drawing.Size(102, 21);
+            this.rbUser.Size = new System.Drawing.Size(147, 21);
             this.rbUser.TabIndex = 5;
             this.rbUser.TabStop = true;
-            this.rbUser.Text = "User-Wise";
+            this.rbUser.Text = "Ventas - Usuario";
             this.rbUser.UseVisualStyleBackColor = true;
             this.rbUser.CheckedChanged += new System.EventHandler(this.rbUser_CheckedChanged);
             // 

@@ -180,5 +180,10 @@ namespace Outfit_POS
         {
             SalesReturns(dtStartDate.Value, dtEndDate.Value, txtName.Text);
         }
+
+        private void ListView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -85,10 +85,12 @@
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::Outfit_POS.Properties.Resources.productos1;
+            this.pictureBox2.Image = global::Outfit_POS.Properties.Resources.staff;
             this.pictureBox2.Location = new System.Drawing.Point(11, 5);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 54);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -199,9 +201,9 @@
             this.Label7.Location = new System.Drawing.Point(33, 71);
             this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(49, 17);
+            this.Label7.Size = new System.Drawing.Size(41, 17);
             this.Label7.TabIndex = 11;
-            this.Label7.Text = "Role :";
+            this.Label7.Text = "Rol :";
             // 
             // txtPassword
             // 
@@ -246,7 +248,7 @@
             // 
             this.Label15.AutoSize = true;
             this.Label15.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label15.Location = new System.Drawing.Point(630, 135);
+            this.Label15.Location = new System.Drawing.Point(633, 135);
             this.Label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(51, 14);
@@ -257,7 +259,7 @@
             // 
             this.Label12.AutoSize = true;
             this.Label12.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label12.Location = new System.Drawing.Point(630, 85);
+            this.Label12.Location = new System.Drawing.Point(633, 85);
             this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label12.Name = "Label12";
             this.Label12.Size = new System.Drawing.Size(22, 14);
@@ -291,7 +293,7 @@
             // 
             this.Label16.AutoSize = true;
             this.Label16.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(163, 186);
+            this.Label16.Location = new System.Drawing.Point(163, 184);
             this.Label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(63, 14);
@@ -360,7 +362,7 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button3.Location = new System.Drawing.Point(23, 21);
+            this.button3.Location = new System.Drawing.Point(10, 21);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 78);
@@ -392,7 +394,7 @@
             // txtContractNo
             // 
             this.txtContractNo.BackColor = System.Drawing.Color.White;
-            this.txtContractNo.Location = new System.Drawing.Point(174, 241);
+            this.txtContractNo.Location = new System.Drawing.Point(166, 241);
             this.txtContractNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtContractNo.Name = "txtContractNo";
             this.txtContractNo.Size = new System.Drawing.Size(219, 24);
@@ -401,7 +403,7 @@
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(21, 244);
+            this.Label4.Location = new System.Drawing.Point(8, 244);
             this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(145, 17);
@@ -411,10 +413,10 @@
             // txtCity
             // 
             this.txtCity.BackColor = System.Drawing.Color.White;
-            this.txtCity.Location = new System.Drawing.Point(633, 153);
+            this.txtCity.Location = new System.Drawing.Point(633, 157);
             this.txtCity.Margin = new System.Windows.Forms.Padding(4);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(208, 24);
+            this.txtCity.Size = new System.Drawing.Size(197, 24);
             this.txtCity.TabIndex = 5;
             // 
             // txtMI
@@ -429,7 +431,7 @@
             // txtBarangay
             // 
             this.txtBarangay.BackColor = System.Drawing.Color.White;
-            this.txtBarangay.Location = new System.Drawing.Point(403, 153);
+            this.txtBarangay.Location = new System.Drawing.Point(403, 157);
             this.txtBarangay.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarangay.Name = "txtBarangay";
             this.txtBarangay.Size = new System.Drawing.Size(219, 24);
@@ -438,7 +440,7 @@
             // txtProvince
             // 
             this.txtProvince.BackColor = System.Drawing.Color.White;
-            this.txtProvince.Location = new System.Drawing.Point(174, 204);
+            this.txtProvince.Location = new System.Drawing.Point(166, 204);
             this.txtProvince.Margin = new System.Windows.Forms.Padding(4);
             this.txtProvince.Name = "txtProvince";
             this.txtProvince.Size = new System.Drawing.Size(664, 24);

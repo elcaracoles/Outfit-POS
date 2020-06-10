@@ -262,5 +262,10 @@ namespace Outfit_POS
             }
            
         }
+
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

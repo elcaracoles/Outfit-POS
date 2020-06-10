@@ -25,7 +25,7 @@ namespace Outfit_POS
         private void frmMain_Load(object sender, EventArgs e)
         {
             SQLConn.getData();
-            this.lbluser.Text = "Login user : " + Username.ToUpper();
+            this.lbluser.Text = "Usuario conectado : " + Username.ToUpper();
         }
 
         private void picClose_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace Outfit_POS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblDateTime.Text = "Date-Time : " + DateTime.Now.ToString("MMMM dd, yyyy hh:mm:ss tt");
+            lblDateTime.Text = "Fecha y Hora : " + DateTime.Now.ToString("MMMM dd, yyyy hh:mm:ss tt");
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -109,6 +109,21 @@ namespace Outfit_POS
         {
             frm_ListReturns lr = new frm_ListReturns(StaffID);
             lr.ShowDialog();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbluser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

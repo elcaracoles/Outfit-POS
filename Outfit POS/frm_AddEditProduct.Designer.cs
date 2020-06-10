@@ -293,6 +293,7 @@
             this.lblTitle.Size = new System.Drawing.Size(312, 43);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Añadir/Editar producto";
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // GroupBox2
             // 
